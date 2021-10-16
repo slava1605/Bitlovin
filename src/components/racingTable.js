@@ -5,44 +5,19 @@ import ChickenImg from "../assets/images/chicken.png";
 import racingData from "../helpers/testRacing";
 
 const RacingTable = () => {
-	const [isRacingDetail, setIsRacingDetail] = useState();
+	const [openedRow, setOpenedRow] = useState(-1);
 
 	useEffect(() => {
 		if (racingData) {
-			let temp = [];
-			racingData.map(row => {
-				temp.push({
-					lane: row.racingChickens.lane,
-					opened: false
-				});
-			});
-			setIsRacingDetail(temp);
+			setOpenedRow(-1);
 		}
 	}, [racingData]);
 
-	const checkRacingDetailOpened = (row) => {
-		const isOpened = isRacingDetail?.filter(_row => _row.lane === row.racingChickens.lane);
-		console.log(isRacingDetail, row);
-		if (isOpened) {
-			return isOpened[0].opened;
-		}
-		return false;
-	}
-
-	const toggleRacingDetail = (row) => {
-		const isOpened = isRacingDetail?.filter(_row => _row.lane === row.racingChickens.lane);
-		let temp = JSON.parse(JSON.stringify(isRacingDetail?isRacingDetail:[]));
-		if (!isOpened) {
-			temp.push({
-				lane: row.racingChickens.lane,
-				opened: true
-			})
+	const toggleRacingOpen = (index) => {
+		if (openedRow === index) {
+			setOpenedRow(-1);
 		} else {
-			let temp1 = temp.filter(_row => _row.lane !== isOpened[0].lane);
-			setIsRacingDetail([...temp1, {
-				lane: row.racingChickens.lane,
-				opened: !isOpened[0].opened
-			}])
+			setOpenedRow(index);
 		}
 	};
 
@@ -66,7 +41,7 @@ const RacingTable = () => {
 						<tr
 							key={`${index}_row`}
 							className="accordion-toggle"
-							onClick={(e) => toggleRacingDetail(row)}
+							onClick={(e) => toggleRacingOpen(index)}
 						>
 							<td>{row.event}</td>
 							<td>{row.location}</td>
@@ -81,7 +56,7 @@ const RacingTable = () => {
 						</tr>
 						<tr key={`${index}_row_1`}>
 							<td colspan="8" className={'hiddenRow'}>
-								<div className={`accordian-body collapse ${checkRacingDetailOpened(row)?"in":""}`} id="demo1">
+								<div className={`accordian-body collapse ${openedRow === index ? "in" : ""}`} id="demo1">
 										<div className="pick-gate">
 											<h2 className="text-center">Pick a Lane to enter</h2>
 											<div className="open-gates">
