@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import TerrainIcon from "../assets/images/terrain.png";
 import { useRacingContext } from "../helpers/hooks/useRacingContext";
+import RacingTable from "../components/racingTable";
 
 const Main = () => {
 	const { headerFocus, setHeaderFocus } = useRacingContext();
@@ -23,6 +24,7 @@ const Main = () => {
 							</div>
 						</div>
 						<div className="table-responsive">
+							<RacingTable />
 							<table className="table table-stripped table-hover" style={{borderCollapse: 'collapse'}}>
 								<thead>
 									<tr>
