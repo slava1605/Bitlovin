@@ -278,6 +278,12 @@ body {
   background: rgba(255, 255, 255, 0.7);
   color: #000000;
 }
+.modal {
+  overflow-y: scroll;
+}
+.modal .table tr th {
+  background: none;
+}
 .table-box .table tr td{
   padding: 18px 20px !important;
   vertical-align: middle;
@@ -336,7 +342,6 @@ body {
  margin-bottom: 15px;
  text-decoration: underline;
 }
-
 
 .price-green{
  color: #27B18A;

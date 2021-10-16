@@ -21,6 +21,8 @@ const racingData = [
 				races: 12,
 				stock: 'Stock',
 				talent: 'Talent',
+class: 'A',
+
 				pop: 12,
 				winnings: 5.99,
 				situations: 'race pen',
@@ -44,6 +46,8 @@ const racingData = [
 				races: 12,
 				stock: 'Stock',
 				talent: 'Talent',
+class: 'A',
+
 				pop: 12,
 				winnings: 5.99,
 				situations: 'race pen',
@@ -67,6 +71,8 @@ const racingData = [
 				races: 12,
 				stock: 'Stock',
 				talent: 'Talent',
+class: 'A',
+
 				pop: 12,
 				winnings: 5.99,
 				situations: 'race pen',
@@ -102,6 +108,7 @@ const racingData = [
 				races: 12,
 				stock: 'Stock',
 				talent: 'Talent',
+				class: 'A',
 				pop: 12,
 				winnings: 5.99,
 				situations: 'race pen',
@@ -137,6 +144,8 @@ const racingData = [
 				races: 12,
 				stock: 'Stock',
 				talent: 'Talent',
+class: 'A',
+
 				pop: 12,
 				winnings: 5.99,
 				situations: 'race pen',
@@ -172,6 +181,8 @@ const racingData = [
 				races: 12,
 				stock: 'Stock',
 				talent: 'Talent',
+class: 'A',
+
 				pop: 12,
 				winnings: 5.99,
 				situations: 'race pen',

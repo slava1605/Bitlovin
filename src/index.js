@@ -8,6 +8,7 @@ import './assets/css/bootstrap.min.css';
 import './assets/css/hover.css';
 import './assets/css/owl.carousel.min.css';
 import './assets/css/owl.theme.default.min.css';
+import './assets/css/customStyle.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { RacingProvider } from './helpers/context/racingContext';
