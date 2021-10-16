@@ -1,29 +1,38 @@
 import React from "react";
+import CloseIcon from "../../assets/images/close-icon.png";
+import ChickenImg from "../../assets/images/chicken.png";
 
-const SelectChickenModal = () => {
+const SelectChickenModal = ({ onClose }) => {
+
+	const handleClose = (e) => {
+		onClose();
+	};
+
 	return (
-		<div class="modal fade" id="select-chicken" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-			<div class="modal-dialog" role="document">
-				<div class="modal-content">
-					<div class="modal-header">
-						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"><img src="images/close-icon.png" alt="" /></span></button>
-						<h3 class="modal-title" id="myModalLabel">Juvinile Jubile
+		<div className="modal fade in" id="select-chicken" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" style={{display: 'block'}}>
+			<div className="modal-dialog" role="document">
+				<div className="modal-content">
+					<div className="modal-header">
+						<button onClick={handleClose} type="button" className="close" data-dismiss="modal" aria-label="Close">
+							<span aria-hidden="true"><img src={CloseIcon} alt="" /></span>
+						</button>
+						<h3 className="modal-title" id="myModalLabel">Juvinile Jubile
 						</h3>
 					</div>
-					<div class="modal-body">
-						<div class="select-chicken-row">
+					<div className="modal-body">
+						<div className="select-chicken-row">
 								<div>
-									<h4 class="text-center">Pecking Order: <span>A</span></h4>
+									<h4 className="text-center">Pecking Order: <span>A</span></h4>
 								</div>
-								<div class="form-group has-feedback">
-									<span class="fa fa-search form-control-feedback"></span>
-									<input type="text" class="form-control customInput" placeholder="Chicken Name" />
+								<div className="form-group has-feedback">
+									<span className="fa fa-search form-control-feedback"></span>
+									<input type="text" className="form-control customInput" placeholder="Chicken Name" />
 								</div>
 								<div>
-									<a href="#"  data-dismiss="modal" data-toggle="modal" data-target="#filter-popup2" class="btn btn-filters"><span class="fa fa-sliders"></span>  Filters</a>
+									<a href="#"  data-dismiss="modal" data-toggle="modal" data-target="#filter-popup2" className="btn btn-filters"><span className="fa fa-sliders"></span>  Filters</a>
 								</div>
 						</div>
-						<table class="table order-table">
+						<table className="table order-table">
 								<tbody>
 									<tr>
 										<th>Image</th>
@@ -36,54 +45,54 @@ const SelectChickenModal = () => {
 										<th></th>
 									</tr>
 									<tr>
-										<td><img src="images/chicken.png" class="img-pic" alt="" /></td>
+										<td><img src={ChickenImg} className="img-pic" alt="" /></td>
 										<td>Willber</td>
 										<td>Dorking</td>
 										<td>96%</td>
 										<td>12</td>
 										<td>2/0/4</td>
 										<td>Talent</td>
-										<td><a href="#" data-toggle="modal" data-dismiss="modal" data-target="#transaction-confirmation"  class="btnEnter">Enter</a></td>
+										<td><a href="#" data-toggle="modal" data-dismiss="modal" data-target="#transaction-confirmation"  className="btnEnter">Enter</a></td>
 									</tr>
 									<tr>
-										<td><img src="images/chicken.png" class="img-pic" alt="" /></td>
+										<td><img src={ChickenImg} className="img-pic" alt="" /></td>
 										<td>Willber</td>
 										<td>Dorking</td>
 										<td>96%</td>
 										<td>12</td>
 										<td>2/0/4</td>
 										<td>Talent</td>
-										<td><a href="#" data-toggle="modal" data-dismiss="modal" data-target="#transaction-confirmation"  class="btnEnter">Enter</a></td>
+										<td><a href="#" data-toggle="modal" data-dismiss="modal" data-target="#transaction-confirmation"  className="btnEnter">Enter</a></td>
 									</tr>
 									<tr>
-										<td><img src="images/chicken.png" class="img-pic" alt="" /></td>
+										<td><img src={ChickenImg} className="img-pic" alt="" /></td>
 										<td>Willber</td>
 										<td>Dorking</td>
 										<td>96%</td>
 										<td>12</td>
 										<td>2/0/4</td>
 										<td>Talent</td>
-										<td><a href="#" data-toggle="modal" data-dismiss="modal" data-target="#transaction-confirmation"  class="btnEnter">Enter</a></td>
+										<td><a href="#" data-toggle="modal" data-dismiss="modal" data-target="#transaction-confirmation"  className="btnEnter">Enter</a></td>
 									</tr>
 									<tr>
-										<td><img src="images/chicken.png" class="img-pic" alt="" /></td>
+										<td><img src={ChickenImg} className="img-pic" alt="" /></td>
 										<td>Willber</td>
 										<td>Dorking</td>
 										<td>96%</td>
 										<td>12</td>
 										<td>2/0/4</td>
 										<td>Talent</td>
-										<td><a href="#" data-toggle="modal" data-dismiss="modal" data-target="#transaction-confirmation"  class="btnEnter">Enter</a></td>
+										<td><a href="#" data-toggle="modal" data-dismiss="modal" data-target="#transaction-confirmation"  className="btnEnter">Enter</a></td>
 									</tr>
 									<tr>
-										<td><img src="images/chicken.png" class="img-pic" alt="" /></td>
+										<td><img src={ChickenImg} className="img-pic" alt="" /></td>
 										<td>Willber</td>
 										<td>Dorking</td>
 										<td>96%</td>
 										<td>12</td>
 										<td>2/0/4</td>
 										<td>Talent</td>
-										<td><a href="#" data-toggle="modal" data-dismiss="modal" data-target="#transaction-confirmation"  class="btnEnter">Enter</a></td>
+										<td><a href="#" data-toggle="modal" data-dismiss="modal" data-target="#transaction-confirmation"  className="btnEnter">Enter</a></td>
 									</tr>
 								</tbody>
 						</table>

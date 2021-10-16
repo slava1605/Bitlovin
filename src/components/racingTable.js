@@ -4,10 +4,12 @@ import TerrainIcon from "../assets/images/terrain.png";
 import ChickenImg from "../assets/images/chicken.png";
 import racingData from "../helpers/testRacing";
 import ViewChickenModal from "./modals/viewChickenModal";
+import SelectChickenModal from "./modals/selectChickenModal";
 
 const RacingTable = () => {
 	const [openedRow, setOpenedRow] = useState(-1);
 	const [currentRacing, setCurrentRacing] = useState();
+	const [isChickenSelectModal, setIsChickenSelectModal] = useState(false);
 
 	useEffect(() => {
 		if (racingData) {
@@ -26,6 +28,12 @@ const RacingTable = () => {
 	const closeAllModal = (e) => {
 		// e.stopPropagation();
 		// setCurrentRacing(null);
+	};
+
+	const handleOpenSelectChickenModal = (e) => {
+		e.preventDefault();
+		console.log('aaaaaa')
+		setIsChickenSelectModal(true);
 	};
 
 	return (
@@ -73,16 +81,16 @@ const RacingTable = () => {
 											<h2 className="text-center">Pick a Lane to enter</h2>
 											<div className="open-gates">
 												<span>Open Lane</span>
-												<a href="#" data-toggle="modal" data-target="#select-chicken" className="btn">2</a>
-												<a href="#" data-toggle="modal" data-target="#select-chicken" className="btn">3</a>
-												<a href="#" data-toggle="modal" data-target="#select-chicken" className="btn">4</a>
-												<a href="#" data-toggle="modal" data-target="#select-chicken" className="btn">5</a>
-												<a href="#" data-toggle="modal" data-target="#select-chicken" className="btn">6</a>
-												<a href="#" data-toggle="modal" data-target="#select-chicken" className="btn">7</a>
-												<a href="#" data-toggle="modal" data-target="#select-chicken" className="btn">8</a>
-												<a href="#" data-toggle="modal" data-target="#select-chicken" className="btn">9</a>
-												<a href="#" data-toggle="modal" data-target="#select-chicken" className="btn">10</a>
-												<a href="#" data-toggle="modal" data-target="#select-chicken" className="btn">12</a>
+												<a onClick={handleOpenSelectChickenModal} className="btn">2</a>
+												<a onClick={handleOpenSelectChickenModal} className="btn">3</a>
+												<a onClick={handleOpenSelectChickenModal} className="btn">4</a>
+												<a onClick={handleOpenSelectChickenModal} className="btn">5</a>
+												<a onClick={handleOpenSelectChickenModal} className="btn">6</a>
+												<a onClick={handleOpenSelectChickenModal} className="btn">7</a>
+												<a onClick={handleOpenSelectChickenModal} className="btn">8</a>
+												<a onClick={handleOpenSelectChickenModal} className="btn">9</a>
+												<a onClick={handleOpenSelectChickenModal} className="btn">10</a>
+												<a onClick={handleOpenSelectChickenModal} className="btn">12</a>
 											</div>
 										</div>
 										
@@ -122,6 +130,7 @@ const RacingTable = () => {
 				</tbody>
 			</table>	
 			{currentRacing && <ViewChickenModal chickenData={currentRacing} closeModal={() => setCurrentRacing(null)} />}
+			{isChickenSelectModal && <SelectChickenModal onClose={() => setIsChickenSelectModal(false)} />}
 		</>
 	)
 };
