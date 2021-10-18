@@ -1,181 +1,143 @@
-import React from "react";
+import React, { useState } from "react";
+import Modal from "react-bootstrap/Modal";
 
-const FilterModal = ({ closeModal }) => {
+const FilterModal = ({ onClose }) => {
+   const peckingOrders = ['A', 'B', 'C', 'Chicks'];
+   const racingDistances = [100, 120, 140, 160, 180, 200];
+   const terrains = ['Dirt', 'Grass', 'Road', 'Rock', 'Sand', 'Snow', 'Track'];
 
-  return (
-		<>
-			<div className="mask" onClick={closeModal}></div>
-			<div class="modal fade in" id="filter-popup" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" style={{display: 'block'}}>
-         <div class="modal-dialog" role="document">
-            <div class="modal-content">
-               <div class="modal-header">
-                  <h3 class="modal-title" id="myModalLabel">Filter</h3>
-               </div>
-               <div class="modal-body">
-                  <div class="row">
-                     <div class="col-md-6">
-                        <div class="form-group">
-                           <label for="">Pecking Order</label>
-                           <div class="dropdown select-checkout">
-                              <a class="dropdown-toggle btn" data-toggle="dropdown" href="#">
-                              Select Pecking Order
-                              <b class="caret"></b>
-                              </a>
-                              <ul class="dropdown-menu dropdown-menu-form" role="menu">
-                                 <li>
-                                    <label class="checkbox">
-                                    <input type="checkbox" />
-                                    A
-                                    </label>
-                                 </li>
-                                 <li>
-                                    <label class="checkbox">
-                                    <input type="checkbox" />
-                                    B
-                                    </label>
-                                 </li>
-                                 <li>
-                                    <label class="checkbox">
-                                    <input type="checkbox" />
-                                    C
-                                    </label>
-                                 </li>
-                                 <li>
-                                    <label class="checkbox">
-                                    <input type="checkbox" />
-                                    Chicks
-                                    </label>
-                                 </li>
-                              </ul>
+   const [isPeckingOrder, setIsPeckingOrder] = useState(false);
+   const [isDistance, setIsDistance] = useState(false);
+   const [isTerrains, setIsTerrains] = useState(false);
+   const [_className, setClassName] = useState("modal fade in");
+
+   const handleCloseModal = (e) => {
+      e.stopPropagation();
+      setClassName("modal fade");
+      onClose();
+   };
+
+   const handleCloseDropdown = (e) => {
+      e.stopPropagation();
+      setIsPeckingOrder(false);
+      setIsDistance(false);
+      setIsTerrains(false);
+   };
+
+   const handleTogglePeckingOrder = (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+      setIsPeckingOrder(!isPeckingOrder);
+   };
+
+   const handleToggleDistance = (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+      setIsDistance(!isDistance);
+   };
+
+   const handleToggleTerrains = (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+      setIsTerrains(!isTerrains);
+   };
+
+   return (
+		<Modal.Dialog>
+         <div className="mask"></div>
+			<div className={_className} onClick={handleCloseModal} id="filter-popup" style={{display: 'block'}}>
+            <div className="modal-dialog" role="document" onClick={handleCloseDropdown}>
+               <div className="modal-content" >
+                  <div className="modal-header">
+                     <h3 className="modal-title" id="myModalLabel">Filter</h3>
+                  </div>
+                  <div className="modal-body">
+                     <div className="row">
+                        <div className="col-md-6">
+                           <div className="form-group">
+                              <label for="">Pecking Order</label>
+                              <div className={`dropdown select-checkout ${isPeckingOrder?' open': ''}`}>
+                                 <a onClick={handleTogglePeckingOrder} className="dropdown-toggle btn" data-toggle="dropdown" href>
+                                    Select Pecking Order
+                                    <b className="caret"></b>
+                                 </a>
+                                 <ul className="dropdown-menu dropdown-menu-form" role="menu">
+                                    {peckingOrders.map((order, index) => (
+                                    <li key={index + '_order'} onClick={(e) => e.stopPropagation()}>
+                                       <label className="checkbox">
+                                       <input type="checkbox" />
+                                          {order}
+                                       </label>
+                                    </li>
+                                    ))}
+                                 </ul>
+                              </div>
+                           </div>
+                        </div>
+                        <div className="col-md-6">
+                           <div className="form-group">
+                              <label for="">Distance</label>
+                              <div className={`dropdown select-checkout ${isDistance?' open': ''}`}>
+                                 <a className="dropdown-toggle btn" onClick={handleToggleDistance} href>
+                                    Select Distance
+                                 <b className="caret"></b>
+                                 </a>
+                                 <ul className="dropdown-menu dropdown-menu-form" role="menu">
+                                    {racingDistances.map((distance, index) => (
+                                       <li key={`distance_${index}`} onClick={(e) => e.stopPropagation()}>
+                                          <label className="checkbox">
+                                          <input type="checkbox" />
+                                             {distance}m
+                                          </label>
+                                       </li>
+                                    ))}
+                                 </ul>
+                              </div>
                            </div>
                         </div>
                      </div>
-                     <div class="col-md-6">
-                        <div class="form-group">
-                           <label for="">Distance</label>
-                           <div class="dropdown select-checkout">
-                              <a class="dropdown-toggle btn" data-toggle="dropdown" href="#">
-                              Select Distance
-                              <b class="caret"></b>
-                              </a>
-                              <ul class="dropdown-menu dropdown-menu-form" role="menu">
-                                 <li>
-                                    <label class="checkbox">
-                                    <input type="checkbox" />
-                                    100m
-                                    </label>
-                                 </li>
-                                 <li>
-                                    <label class="checkbox">
-                                    <input type="checkbox" />
-                                    120m
-                                    </label>
-                                 </li>
-                                 <li>
-                                    <label class="checkbox">
-                                    <input type="checkbox" />
-                                    140m
-                                    </label>
-                                 </li>
-                                 <li>
-                                    <label class="checkbox">
-                                    <input type="checkbox" />
-                                    160m
-                                    </label>
-                                 </li>
-                                 <li>
-                                    <label class="checkbox">
-                                    <input type="checkbox" />
-                                    180m
-                                    </label>
-                                 </li>
-                                 <li>
-                                    <label class="checkbox">
-                                    <input type="checkbox" />
-                                    200m
-                                    </label>
-                                 </li>
-                              </ul>
+                     <div className="row">
+                        <div className="col-md-6">
+                           <div className="form-group">
+                              <label for="">Entry Fee (Min)</label>
+                              <input type="text" className="form-control" name="" id="" />
+                           </div>
+                        </div>
+                        <div className="col-md-6">
+                           <div className="form-group">
+                              <label for="">Entry Fee (Max)</label>
+                              <input type="text" className="form-control" name="" id="" />
                            </div>
                         </div>
                      </div>
-                  </div>
-                  <div class="row">
-                     <div class="col-md-6">
-                        <div class="form-group">
-                           <label for="">Entry Fee (Min)</label>
-                           <input type="text" class="form-control" name="" id="" />
+                     <div className="form-group">
+                        <label for="">Terrain Type</label>
+                        <div className={`dropdown select-checkout ${isTerrains? 'open': ''}`}>
+                           <a className="dropdown-toggle btn" onClick={handleToggleTerrains} href>
+                              Select Terrain
+                           <b className="caret"></b>
+                           </a>
+                           <ul className="dropdown-menu dropdown-menu-form" role="menu">
+                              {terrains.map((terrain, index) => (
+                              <li key={`terain_${index}`} onClick={(e) => e.stopPropagation()}>
+                                 <label className="checkbox">
+                                 <input type="checkbox" />
+                                    {terrain}
+                                 </label>
+                              </li>
+                              ))}
+                           </ul>
                         </div>
                      </div>
-                     <div class="col-md-6">
-                        <div class="form-group">
-                           <label for="">Entry Fee (Max)</label>
-                           <input type="text" class="form-control" name="" id="" />
-                        </div>
+                     <div className="footer-btn">
+                        <button type="button" className="btn btn-reset">Reset</button>
+                        <button type="button" className="btn btn-filter-modal">Filter</button>
                      </div>
-                  </div>
-                  <div class="form-group">
-                     <label for="">Terrain Type</label>
-                     <div class="dropdown select-checkout">
-                        <a class="dropdown-toggle btn" data-toggle="dropdown" href="#">
-                        Select Terrain
-                        <b class="caret"></b>
-                        </a>
-                        <ul class="dropdown-menu dropdown-menu-form" role="menu">
-                           <li>
-                              <label class="checkbox">
-                              <input type="checkbox" />
-                              Dirt
-                              </label>
-                           </li>
-                           <li>
-                              <label class="checkbox">
-                              <input type="checkbox" />
-                              Grass
-                              </label>
-                           </li>
-                           <li>
-                              <label class="checkbox">
-                              <input type="checkbox" />
-                              Road
-                              </label>
-                           </li>
-                           <li>
-                              <label class="checkbox">
-                              <input type="checkbox" />
-                              Rock
-                              </label>
-                           </li>
-                           <li>
-                              <label class="checkbox">
-                              <input type="checkbox" />
-                              Sand
-                              </label>
-                           </li>
-                           <li>
-                              <label class="checkbox">
-                              <input type="checkbox" />
-                              Snow
-                              </label>
-                           </li>
-                           <li>
-                              <label class="checkbox">
-                              <input type="checkbox" />
-                              Track
-                              </label>
-                           </li>
-                        </ul>
-                     </div>
-                  </div>
-                  <div class="footer-btn">
-                     <button type="button" class="btn btn-reset">Reset</button>
-                     <button type="button" class="btn btn-filter-modal">Filter</button>
                   </div>
                </div>
             </div>
          </div>
-      </div>
-		</>
+		</Modal.Dialog>
 	)
 };
 

@@ -3,6 +3,7 @@ import TerrainIcon from "../assets/images/terrain.png";
 import { useRacingContext } from "../helpers/hooks/useRacingContext";
 import RacingTable from "../components/racingTable";
 import FilterModal from "../components/modals/filterModal1.js";
+import { Link } from "react-router-dom";
 
 const Main = () => {
 	const { headerFocus, setHeaderFocus } = useRacingContext();
@@ -18,16 +19,16 @@ const Main = () => {
 			<div className="container">
 				<div className="table-box">
 						<ul>
-							<li className="active"><a href="">Enter Race</a></li>
-							<li><a href="">Scheduled Races</a></li>
-							<li><a href="">Results</a></li>
+							<li className="active"><Link to="/">Enter Race</Link></li>
+							<li><Link to="scheduled-races">Scheduled Races</Link></li>
+							<li><a href>Results</a></li>
 						</ul>
 						<div className="table-buttons">
 							<div>
-									<a href="#" className="btn btn-races">Open Races</a>
+									<a href className="btn btn-races">Open Races</a>
 							</div>
 							<div>
-								<a onClick={handleOpenFilterModal} className="btn btn-filters"><span className="fa fa-sliders"></span>  Filters</a>
+								<a onClick={handleOpenFilterModal} className="btn btn-filters" href><span className="fa fa-sliders"></span>  Filters</a>
 							</div>
 						</div>
 						<div className="table-responsive">

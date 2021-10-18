@@ -1,24 +1,37 @@
-import React from "react";
+import React, {useEffect, useState} from "react";
 import ChickenThumbnail from "../../assets/images/chicken-thumbnail.png";
 import CloseIcon from "../../assets/images/close-icon.png";
 
 const ViewChickenModal = ({ chickenData, closeModal }) => {
+	const [_className, setClassName] = useState('');
+
+	useEffect(() => {
+		if (chickenData)
+			setClassName('in');
+		else setClassName('');
+	}, [chickenData])
+
+	const handleClose = (e) => {
+		setClassName('closing');
+		setTimeout(()=>closeModal(), 350);
+	};
 
 	return (
 		<>
-			<div className="mask" onClick={closeModal}></div>
 			<div
-				class="modal fade in"
+				class={`modal fade ${chickenData ? "show" : ""} ${_className}`}
 				id="view-chicken"
 				tabindex="-1"
 				role="dialog"
 				aria-labelledby="myModalLabel"
-				style={chickenData ? { display: 'block' } : {display: 'none'}}
+				// style={chickenData ? { display: 'block' } : {display: 'none'}}
+				// style={{display: 'block'}}
 			>
+				<div className="mask" onClick={handleClose}></div>
 				<div class="modal-dialog" role="document">
 					<div class="modal-content">
 						<div class="modal-header">
-							<button type="button" class="close" onClick={closeModal}>
+							<button type="button" class="close" onClick={handleClose}>
 								<span aria-hidden="true"><img src={CloseIcon} alt="" /></span>
 							</button>
 							<h3 class="modal-title" id="myModalLabel">View Chicken Details</h3>
@@ -36,8 +49,8 @@ const ViewChickenModal = ({ chickenData, closeModal }) => {
 										</thead>
 										<tbody>
 											<tr>
-												<td>{chickenData.owner}</td>
-												<td>{chickenData.name}</td>
+												<td>{chickenData?.owner}</td>
+												<td>{chickenData?.name}</td>
 											</tr>
 										</tbody>
 									</table>
@@ -56,13 +69,13 @@ const ViewChickenModal = ({ chickenData, closeModal }) => {
 											<th>History</th>
 										</tr>
 										<tr>
-											<td>{chickenData.heritage}</td>
-											<td>{chickenData.perfection}%</td>
-											<td>{chickenData.stock}</td>
-											<td>{chickenData.talent}</td>
-											<td><span class="text-classwhite">CLASS {chickenData.class}</span></td>
-											<td>{chickenData.pop}</td>
-											<td>{chickenData.history}</td>
+											<td>{chickenData?.heritage}</td>
+											<td>{chickenData?.perfection}%</td>
+											<td>{chickenData?.stock}</td>
+											<td>{chickenData?.talent}</td>
+											<td><span class="text-classwhite">CLASS {chickenData?.class}</span></td>
+											<td>{chickenData?.pop}</td>
+											<td>{chickenData?.history}</td>
 										</tr>
 										<tr>
 											<th>Races</th>
@@ -74,13 +87,13 @@ const ViewChickenModal = ({ chickenData, closeModal }) => {
 											<th>Eyes</th>
 										</tr>
 										<tr>
-											<td>{chickenData.races}</td>
-											<td>${chickenData.winnings}</td>
-											<td>{chickenData.situations}</td>
-											<td>{chickenData.gender}</td>
-											<td>{chickenData.color}</td>
-											<td>{chickenData.stripes}</td>
-											<td>{chickenData.eyes}</td>
+											<td>{chickenData?.races}</td>
+											<td>${chickenData?.winnings}</td>
+											<td>{chickenData?.situations}</td>
+											<td>{chickenData?.gender}</td>
+											<td>{chickenData?.color}</td>
+											<td>{chickenData?.stripes}</td>
+											<td>{chickenData?.eyes}</td>
 										</tr>
 										<tr>
 											<th colspan="1" class="hidden-xs"></th>
@@ -91,10 +104,10 @@ const ViewChickenModal = ({ chickenData, closeModal }) => {
 										</tr>
 										<tr>
 											<td colspan="1" class="hidden-xs"></td>
-											<td>{chickenData.beak}</td>
-											<td>{chickenData.comb}</td>
-											<td>{chickenData.wattle}</td>
-											<td>{chickenData.background}</td>
+											<td>{chickenData?.beak}</td>
+											<td>{chickenData?.comb}</td>
+											<td>{chickenData?.wattle}</td>
+											<td>{chickenData?.background}</td>
 										</tr>
 									</table>
 								</div>

@@ -64,7 +64,7 @@ const Header = () => {
 							<ul className="dropdown-menu">
 								<li><Link to="/">Enter Race</Link></li>
 								<li><Link to="/scheduled-races">Scheduled</Link></li>
-								<li><a href="#">Results</a></li>
+								<li><a href>Results</a></li>
 							</ul>
 						</li>
 						<li className={`dropdown ${isChecken ? "open" : ''}`}>

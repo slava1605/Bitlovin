@@ -31,7 +31,7 @@ code {
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Montserrat-Regular';
+  font-family: 'Montserrat-Regular' !important;
   background: url(./assets/images/banner2.jpg);
   background-repeat: no-repeat;
  background-size: cover;
@@ -1063,13 +1063,13 @@ body {
  color: #fff;
  font-family: 'Montserrat-SemiBold';
  border: 0 !important;   
- padding: 0;
+ padding: 0 !important;
 }
 .chicken-user .table tr td{
  color: #fff;
  border: 0 !important;
- padding: 0;
- padding-top: 10px;
+ padding: 0 !important;
+ padding-top: 10px !important;
 }
 
 .chicken-box-lg{
@@ -1091,12 +1091,13 @@ body {
  font-family: 'Montserrat-SemiBold';
  border: 0 !important;   
  font-size: 16px;
+ padding: 8px !important;
 }
 .chicken-box-lg .table tr td{
  color: #fff;
  border: 0 !important;
- padding-top: 5px;
- padding-bottom: 40px;
+ padding-top: 5px !important;
+ padding-bottom: 40px !important;
 }
 /***** Racing Pending *****/
 .racing-pending{

@@ -12,4 +12,56 @@
 	position: fixed;
 	background: gray;
 	opacity: 0.7;
+	transition: opacity 0.5s ease-out;
+}
+
+.dropdown-menu-form {
+	padding-left: 30px;
+}
+
+#select-chicken .form-control-feedback {
+	top: 6px !important;
+}
+
+#select-chicken .table tr th {
+	padding: 8px !important;
+	text-align: left;
+}
+
+#select-chicken .table tr td {
+	padding: 8px !important;
+	text-align: left;
+}
+
+/* .in {
+	transition: height 1s !important;
+}
+.out {
+	height: 0;
+	transition: height 1s !important;
+} */
+
+.table-box .show {
+	display: table-row !important;
+}
+
+/* .modal.in .modal-dialog {
+	transform: translate(0,0) !important;
+} */
+
+.modal.in {
+	display: block;
+	transition: transform 3s ease-out;
+}
+
+.modal {
+	opacity: 0;
+	transition: transform 3s ease-out;
+}
+
+.closing {
+	transform: translate(0,-25%) !important;
+	display: block !important;
+	/* opacity: 0.4 !important; */
+	transition: opacity 0.35s;
 }

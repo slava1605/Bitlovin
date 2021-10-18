@@ -1,15 +1,24 @@
-import React from "react";
+import React, {useState, useEffect} from "react";
 import CloseIcon from "../../assets/images/close-icon.png";
 import ChickenImg from "../../assets/images/chicken.png";
 
-const SelectChickenModal = ({ onClose }) => {
+const SelectChickenModal = ({ isOpen, onClose }) => {
+	const [_className, setClassName] = useState('');
+
+	useEffect(() => {
+		if (isOpen)
+			setClassName('in');
+		else setClassName('');
+	}, [isOpen]);
 
 	const handleClose = (e) => {
-		onClose();
+		setClassName('closing');
+		setTimeout(()=>onClose(), 350);
 	};
 
 	return (
-		<div className="modal fade in" id="select-chicken" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" style={{display: 'block'}}>
+		<div className={`modal fade ${isOpen ? "show": ""} ${_className}`} id="select-chicken" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+			<div className="mask" onClick={onClose}></div>
 			<div className="modal-dialog" role="document">
 				<div className="modal-content">
 					<div className="modal-header">

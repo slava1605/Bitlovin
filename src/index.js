@@ -21,43 +21,20 @@ ReactDOM.render(
   <React.StrictMode>
     <RacingProvider>
       <Router>
-        <Header />
         <Switch>
-          <Route path="/">
-            <AuthCheck allowAnon>
-              <Main />
-            </AuthCheck>
-          </Route>
           <Route path="/scheduled-races">
+            <Header />
             <AuthCheck allowAnon>
               <ScheduledRaces />
             </AuthCheck>
           </Route>
-          {/* <Route path="/">
+          <Route path="/">
+            <Header />
             <AuthCheck allowAnon>
               <Main />
             </AuthCheck>
           </Route>
-          <Route path="/">
-            <AuthCheck allowAnon>
-              <Main />
-            </AuthCheck>
-          </Route>
-          <Route path="/">
-            <AuthCheck allowAnon>
-              <Main />
-            </AuthCheck>
-          </Route>
-          <Route path="/">
-            <AuthCheck allowAnon>
-              <Main />
-            </AuthCheck>
-          </Route>
-          <Route path="/">
-            <AuthCheck allowAnon>
-              <Main />
-            </AuthCheck>
-          </Route> */}
+          
         </Switch>
       </Router>
     </RacingProvider>
