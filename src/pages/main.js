@@ -21,7 +21,7 @@ const Main = () => {
 						<ul>
 							<li className="active"><Link to="/">Enter Race</Link></li>
 							<li><Link to="scheduled-races">Scheduled Races</Link></li>
-							<li><a href>Results</a></li>
+							<li><Link to="/results">Results</Link></li>
 						</ul>
 						<div className="table-buttons">
 							<div>

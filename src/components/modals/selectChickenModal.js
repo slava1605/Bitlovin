@@ -37,83 +37,83 @@ const SelectChickenModal = ({ isOpen, onClose }) => {
 					</div>
 					<div className="modal-body">
 						<div className="select-chicken-row">
-								<div>
-									<h4 className="text-center">Pecking Order: <span>A</span></h4>
-								</div>
-								<div className="form-group has-feedback">
-									<span className="fa fa-search form-control-feedback"></span>
-									<input type="text" className="form-control customInput" placeholder="Chicken Name" />
-								</div>
-								<div>
-									<a href onClick={handleFilter2} className="btn btn-filters">
-										<span className="fa fa-sliders"></span>
-										Filters
-									</a>
-								</div>
+							<div>
+								<h4 className="text-center">Pecking Order: <span>A</span></h4>
+							</div>
+							<div className="form-group has-feedback">
+								<span className="fa fa-search form-control-feedback"></span>
+								<input type="text" className="form-control customInput" placeholder="Chicken Name" />
+							</div>
+							<div>
+								<a href onClick={handleFilter2} className="btn btn-filters">
+									<span className="fa fa-sliders"></span>
+									Filters
+								</a>
+							</div>
 						</div>
 						<table className="table order-table">
-								<tbody>
-									<tr>
-										<th>Image</th>
-										<th>Name</th>
-										<th>Heritage</th>
-										<th>Perfection%</th>
-										<th>Races</th>
-										<th>History</th>
-										<th>Talent</th>
-										<th></th>
-									</tr>
-									<tr>
-										<td><img src={ChickenImg} className="img-pic" alt="" /></td>
-										<td>Willber</td>
-										<td>Dorking</td>
-										<td>96%</td>
-										<td>12</td>
-										<td>2/0/4</td>
-										<td>Talent</td>
-										<td><a href data-toggle="modal" data-dismiss="modal" data-target="#transaction-confirmation"  className="btnEnter">Enter</a></td>
-									</tr>
-									<tr>
-										<td><img src={ChickenImg} className="img-pic" alt="" /></td>
-										<td>Willber</td>
-										<td>Dorking</td>
-										<td>96%</td>
-										<td>12</td>
-										<td>2/0/4</td>
-										<td>Talent</td>
-										<td><a href data-toggle="modal" data-dismiss="modal" data-target="#transaction-confirmation"  className="btnEnter">Enter</a></td>
-									</tr>
-									<tr>
-										<td><img src={ChickenImg} className="img-pic" alt="" /></td>
-										<td>Willber</td>
-										<td>Dorking</td>
-										<td>96%</td>
-										<td>12</td>
-										<td>2/0/4</td>
-										<td>Talent</td>
-										<td><a href data-toggle="modal" data-dismiss="modal" data-target="#transaction-confirmation"  className="btnEnter">Enter</a></td>
-									</tr>
-									<tr>
-										<td><img src={ChickenImg} className="img-pic" alt="" /></td>
-										<td>Willber</td>
-										<td>Dorking</td>
-										<td>96%</td>
-										<td>12</td>
-										<td>2/0/4</td>
-										<td>Talent</td>
-										<td><a href data-toggle="modal" data-dismiss="modal" data-target="#transaction-confirmation"  className="btnEnter">Enter</a></td>
-									</tr>
-									<tr>
-										<td><img src={ChickenImg} className="img-pic" alt="" /></td>
-										<td>Willber</td>
-										<td>Dorking</td>
-										<td>96%</td>
-										<td>12</td>
-										<td>2/0/4</td>
-										<td>Talent</td>
-										<td><a href data-toggle="modal" data-dismiss="modal" data-target="#transaction-confirmation"  className="btnEnter">Enter</a></td>
-									</tr>
-								</tbody>
+							<tbody>
+								<tr>
+									<th>Image</th>
+									<th>Name</th>
+									<th>Heritage</th>
+									<th>Perfection%</th>
+									<th>Races</th>
+									<th>History</th>
+									<th>Talent</th>
+									<th></th>
+								</tr>
+								<tr>
+									<td><img src={ChickenImg} className="img-pic" alt="" /></td>
+									<td>Willber</td>
+									<td>Dorking</td>
+									<td>96%</td>
+									<td>12</td>
+									<td>2/0/4</td>
+									<td>Talent</td>
+									<td><a href data-toggle="modal" data-dismiss="modal" data-target="#transaction-confirmation"  className="btnEnter">Enter</a></td>
+								</tr>
+								<tr>
+									<td><img src={ChickenImg} className="img-pic" alt="" /></td>
+									<td>Willber</td>
+									<td>Dorking</td>
+									<td>96%</td>
+									<td>12</td>
+									<td>2/0/4</td>
+									<td>Talent</td>
+									<td><a href data-toggle="modal" data-dismiss="modal" data-target="#transaction-confirmation"  className="btnEnter">Enter</a></td>
+								</tr>
+								<tr>
+									<td><img src={ChickenImg} className="img-pic" alt="" /></td>
+									<td>Willber</td>
+									<td>Dorking</td>
+									<td>96%</td>
+									<td>12</td>
+									<td>2/0/4</td>
+									<td>Talent</td>
+									<td><a href data-toggle="modal" data-dismiss="modal" data-target="#transaction-confirmation"  className="btnEnter">Enter</a></td>
+								</tr>
+								<tr>
+									<td><img src={ChickenImg} className="img-pic" alt="" /></td>
+									<td>Willber</td>
+									<td>Dorking</td>
+									<td>96%</td>
+									<td>12</td>
+									<td>2/0/4</td>
+									<td>Talent</td>
+									<td><a href data-toggle="modal" data-dismiss="modal" data-target="#transaction-confirmation"  className="btnEnter">Enter</a></td>
+								</tr>
+								<tr>
+									<td><img src={ChickenImg} className="img-pic" alt="" /></td>
+									<td>Willber</td>
+									<td>Dorking</td>
+									<td>96%</td>
+									<td>12</td>
+									<td>2/0/4</td>
+									<td>Talent</td>
+									<td><a href data-toggle="modal" data-dismiss="modal" data-target="#transaction-confirmation"  className="btnEnter">Enter</a></td>
+								</tr>
+							</tbody>
 						</table>
 					</div>
 					{isFilter2 && <FilterModal2 isOpen={isFilter2} onClose={() => setIsFilter2(false)} />}

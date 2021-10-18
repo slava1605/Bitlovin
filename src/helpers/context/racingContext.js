@@ -5,12 +5,15 @@ export const RacingContext = createContext({});
 
 export const RacingProvider = ({ children }) => {
 	const [headerFocus, setHeaderFocus] = useState(false);
+	const [loading, setLoading] = useState(false);
 
 	return (
 		<RacingContext.Provider
 			value={{
 				headerFocus,
-				setHeaderFocus
+				setHeaderFocus,
+				loading,
+				setLoading
 			}}
 		>
 			{children}

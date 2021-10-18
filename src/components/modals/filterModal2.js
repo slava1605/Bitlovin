@@ -59,70 +59,70 @@ const FilterModal2 = ({ isOpen, onClose }) => {
 						</div>
 						<div class="modal-body" onClick={handleCloseCollapse}>
 							<div class="row">
-									<div class="col-md-6">
-										<div class="form-group">
-												<label for="">Heritage</label>
-												<div class={`dropdown select-checkout ${isHeritage?'open':''}`}>
-													<a class="dropdown-toggle btn" onClick={handleOpenHeritage} href>
-														Select Heritage
-													<b class="caret"></b>
-													</a>
-													{/* <Collapse in={isHeritage}> */}
-														<ul class="dropdown-menu dropdown-menu-form" role="menu">
-															{heritages.map((heritage, index) => (
-																<li key={`heritage_${index}`} onClick={(e) => e.stopPropagation()}>
-																	<label class="checkbox">
-																		<input type="checkbox" />
-																		{heritage}
-																	</label>
-																</li>
-															))}
-														</ul>
-													{/* </Collapse> */}
-												</div>
+								<div class="col-md-6">
+									<div class="form-group">
+										<label for="">Heritage</label>
+										<div class={`dropdown select-checkout ${isHeritage?'open':''}`}>
+											<a class="dropdown-toggle btn" onClick={handleOpenHeritage} href>
+												Select Heritage
+											<b class="caret"></b>
+											</a>
+											{/* <Collapse in={isHeritage}> */}
+												<ul class="dropdown-menu dropdown-menu-form" role="menu">
+													{heritages.map((heritage, index) => (
+														<li key={`heritage_${index}`} onClick={(e) => e.stopPropagation()}>
+															<label class="checkbox">
+																<input type="checkbox" />
+																{heritage}
+															</label>
+														</li>
+													))}
+												</ul>
+											{/* </Collapse> */}
 										</div>
 									</div>
-									<div class="col-md-6">
-										<div class="form-group">
-												<label for="">Talent</label>
-												<div class={`dropdown select-checkout ${isTalent?'open':''}`}>
-													<a class="dropdown-toggle btn" onClick={handleOpenTalent} href>
-														Select Talent
-													<b class="caret"></b>
-													</a>
-													{/* <Collapse in={isTalent}> */}
-														<ul class="dropdown-menu dropdown-menu-form" role="menu">
-															{talents.map((talent, index) => (
-															<li key={`talent_${index}`} onClick={(e) => e.stopPropagation()}>
-																<label class="checkbox">
-																	<input type="checkbox" />
-																	{talent}
-																</label>
-															</li>
-															))}
-														</ul>
-													{/* </Collapse> */}
-												</div>
+								</div>
+								<div class="col-md-6">
+									<div class="form-group">
+										<label for="">Talent</label>
+										<div class={`dropdown select-checkout ${isTalent?'open':''}`}>
+											<a class="dropdown-toggle btn" onClick={handleOpenTalent} href>
+												Select Talent
+											<b class="caret"></b>
+											</a>
+											{/* <Collapse in={isTalent}> */}
+												<ul class="dropdown-menu dropdown-menu-form" role="menu">
+													{talents.map((talent, index) => (
+													<li key={`talent_${index}`} onClick={(e) => e.stopPropagation()}>
+														<label class="checkbox">
+															<input type="checkbox" />
+															{talent}
+														</label>
+													</li>
+													))}
+												</ul>
+											{/* </Collapse> */}
 										</div>
 									</div>
+								</div>
 							</div>
 							<div class="row">
-									<div class="col-md-6">
-										<div class="form-group">
-												<label for="">Races (Min)</label>
-												<input type="text" class="form-control" name="" id="" />
-										</div>
+								<div class="col-md-6">
+									<div class="form-group">
+										<label for="">Races (Min)</label>
+										<input type="text" class="form-control" name="" id="" />
 									</div>
-									<div class="col-md-6">
-										<div class="form-group">
-												<label for="">Races (Max)</label>
-												<input type="text" class="form-control" name="" id="" />
-										</div>
+								</div>
+								<div class="col-md-6">
+									<div class="form-group">
+										<label for="">Races (Max)</label>
+										<input type="text" class="form-control" name="" id="" />
 									</div>
+								</div>
 							</div>
 							<div class="footer-btn">
-									<button type="button" class="btn btn-reset">Reset</button>
-									<button type="button" class="btn btn-filter-modal">Filter</button>
+								<button type="button" class="btn btn-reset">Reset</button>
+								<button type="button" class="btn btn-filter-modal">Filter</button>
 							</div>
 						</div>
 				</div>

@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useRacingContext } from '../helpers/hooks/useRacingContext';
 import TerrainIcon from "../assets/images/terrain.png";
 import ChickenImg from "../assets/images/chicken.png";
-import racingData from "../helpers/testRacing";
+import { racingData } from "../helpers/testRacing";
 import ViewChickenModal from "./modals/viewChickenModal";
 import SelectChickenModal from "./modals/selectChickenModal";
 import { Collapse } from "react-bootstrap";

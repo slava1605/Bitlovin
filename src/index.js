@@ -16,6 +16,7 @@ import AuthCheck from './components/authCheck';
 import Header from './components/header';
 import Main from './pages/main';
 import ScheduledRaces from './pages/scheduledRaces';
+import Results from './pages/result';
 
 ReactDOM.render(
   <React.StrictMode>
@@ -26,6 +27,12 @@ ReactDOM.render(
             <Header />
             <AuthCheck allowAnon>
               <ScheduledRaces />
+            </AuthCheck>
+          </Route>
+          <Route path="/results">
+            <Header />
+            <AuthCheck allowAnon>
+              <Results />
             </AuthCheck>
           </Route>
           <Route path="/">
