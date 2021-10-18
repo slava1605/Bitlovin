@@ -1,9 +1,11 @@
 import React, {useState, useEffect} from "react";
 import CloseIcon from "../../assets/images/close-icon.png";
 import ChickenImg from "../../assets/images/chicken.png";
+import FilterModal2 from "./filterModal2";
 
 const SelectChickenModal = ({ isOpen, onClose }) => {
 	const [_className, setClassName] = useState('');
+	const [isFilter2, setIsFilter2] = useState(false);
 
 	useEffect(() => {
 		if (isOpen)
@@ -16,9 +18,14 @@ const SelectChickenModal = ({ isOpen, onClose }) => {
 		setTimeout(()=>onClose(), 350);
 	};
 
+	const handleFilter2 = (e) => {
+		e.preventDefault();
+		setIsFilter2(true);
+	};
+
 	return (
-		<div className={`modal fade ${isOpen ? "show": ""} ${_className}`} id="select-chicken" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-			<div className="mask" onClick={onClose}></div>
+		<div className={`modal fade ${isOpen ? "show": ""} ${_className}`} id="select-chicken" tabIndex="-1" role="dialog" ariaLabelledBy="myModalLabel">
+			<div className="mask" onClick={handleClose}></div>
 			<div className="modal-dialog" role="document">
 				<div className="modal-content">
 					<div className="modal-header">
@@ -38,7 +45,10 @@ const SelectChickenModal = ({ isOpen, onClose }) => {
 									<input type="text" className="form-control customInput" placeholder="Chicken Name" />
 								</div>
 								<div>
-									<a href="#"  data-dismiss="modal" data-toggle="modal" data-target="#filter-popup2" className="btn btn-filters"><span className="fa fa-sliders"></span>  Filters</a>
+									<a href onClick={handleFilter2} className="btn btn-filters">
+										<span className="fa fa-sliders"></span>
+										Filters
+									</a>
 								</div>
 						</div>
 						<table className="table order-table">
@@ -61,7 +71,7 @@ const SelectChickenModal = ({ isOpen, onClose }) => {
 										<td>12</td>
 										<td>2/0/4</td>
 										<td>Talent</td>
-										<td><a href="#" data-toggle="modal" data-dismiss="modal" data-target="#transaction-confirmation"  className="btnEnter">Enter</a></td>
+										<td><a href data-toggle="modal" data-dismiss="modal" data-target="#transaction-confirmation"  className="btnEnter">Enter</a></td>
 									</tr>
 									<tr>
 										<td><img src={ChickenImg} className="img-pic" alt="" /></td>
@@ -71,7 +81,7 @@ const SelectChickenModal = ({ isOpen, onClose }) => {
 										<td>12</td>
 										<td>2/0/4</td>
 										<td>Talent</td>
-										<td><a href="#" data-toggle="modal" data-dismiss="modal" data-target="#transaction-confirmation"  className="btnEnter">Enter</a></td>
+										<td><a href data-toggle="modal" data-dismiss="modal" data-target="#transaction-confirmation"  className="btnEnter">Enter</a></td>
 									</tr>
 									<tr>
 										<td><img src={ChickenImg} className="img-pic" alt="" /></td>
@@ -81,7 +91,7 @@ const SelectChickenModal = ({ isOpen, onClose }) => {
 										<td>12</td>
 										<td>2/0/4</td>
 										<td>Talent</td>
-										<td><a href="#" data-toggle="modal" data-dismiss="modal" data-target="#transaction-confirmation"  className="btnEnter">Enter</a></td>
+										<td><a href data-toggle="modal" data-dismiss="modal" data-target="#transaction-confirmation"  className="btnEnter">Enter</a></td>
 									</tr>
 									<tr>
 										<td><img src={ChickenImg} className="img-pic" alt="" /></td>
@@ -91,7 +101,7 @@ const SelectChickenModal = ({ isOpen, onClose }) => {
 										<td>12</td>
 										<td>2/0/4</td>
 										<td>Talent</td>
-										<td><a href="#" data-toggle="modal" data-dismiss="modal" data-target="#transaction-confirmation"  className="btnEnter">Enter</a></td>
+										<td><a href data-toggle="modal" data-dismiss="modal" data-target="#transaction-confirmation"  className="btnEnter">Enter</a></td>
 									</tr>
 									<tr>
 										<td><img src={ChickenImg} className="img-pic" alt="" /></td>
@@ -101,11 +111,12 @@ const SelectChickenModal = ({ isOpen, onClose }) => {
 										<td>12</td>
 										<td>2/0/4</td>
 										<td>Talent</td>
-										<td><a href="#" data-toggle="modal" data-dismiss="modal" data-target="#transaction-confirmation"  className="btnEnter">Enter</a></td>
+										<td><a href data-toggle="modal" data-dismiss="modal" data-target="#transaction-confirmation"  className="btnEnter">Enter</a></td>
 									</tr>
 								</tbody>
 						</table>
 					</div>
+					{isFilter2 && <FilterModal2 isOpen={isFilter2} onClose={() => setIsFilter2(false)} />}
 				</div>
 			</div>
 		</div>

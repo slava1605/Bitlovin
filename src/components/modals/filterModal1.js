@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Modal from "react-bootstrap/Modal";
 
 const FilterModal = ({ onClose }) => {
@@ -9,12 +9,16 @@ const FilterModal = ({ onClose }) => {
    const [isPeckingOrder, setIsPeckingOrder] = useState(false);
    const [isDistance, setIsDistance] = useState(false);
    const [isTerrains, setIsTerrains] = useState(false);
-   const [_className, setClassName] = useState("modal fade in");
+   const [_className, setClassName] = useState("modal fade show");
+
+   useEffect(() => {
+      setClassName("modal fade in");
+   }, []);
 
    const handleCloseModal = (e) => {
       e.stopPropagation();
-      setClassName("modal fade");
-      onClose();
+      setClassName("modal fade closing");
+      setTimeout(() => onClose(), 350);
    };
 
    const handleCloseDropdown = (e) => {
