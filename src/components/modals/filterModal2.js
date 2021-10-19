@@ -44,28 +44,28 @@ const FilterModal2 = ({ isOpen, onClose }) => {
 	};
 
 	return (
-		<div class={_className} id="filter-popup2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+		<div className={_className} id="filter-popup2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
 			{isOpen && <div className="mask" onClick={handleClose}></div>}
-			<div class="modal-dialog" role="document">
-				<div class="modal-content">
-						<div class="modal-header">
-							<h3 class="modal-title" id="myModalLabel">Filter</h3>
+			<div className="modal-dialog" role="document">
+				<div className="modal-content">
+						<div className="modal-header">
+							<h3 className="modal-title" id="myModalLabel">Filter</h3>
 						</div>
-						<div class="modal-body" onClick={handleCloseCollapse}>
-							<div class="row">
-								<div class="col-md-6">
-									<div class="form-group">
+						<div className="modal-body" onClick={handleCloseCollapse}>
+							<div className="row">
+								<div className="col-md-6">
+									<div className="form-group">
 										<label for="">Heritage</label>
-										<div class={`dropdown select-checkout ${isHeritage?'open':''}`}>
-											<a class="dropdown-toggle btn" onClick={handleOpenHeritage} href>
+										<div className={`dropdown select-checkout ${isHeritage?'open':''}`}>
+											<a className="dropdown-toggle btn" onClick={handleOpenHeritage} href>
 												Select Heritage
-											<b class="caret"></b>
+											<b className="caret"></b>
 											</a>
 											{/* <Collapse in={isHeritage}> */}
-												<ul class="dropdown-menu dropdown-menu-form" role="menu">
+												<ul className="dropdown-menu dropdown-menu-form" role="menu">
 													{heritages.map((heritage, index) => (
 														<li key={`heritage_${index}`} onClick={(e) => e.stopPropagation()}>
-															<label class="checkbox">
+															<label className="checkbox">
 																<input type="checkbox" />
 																{heritage}
 															</label>
@@ -76,19 +76,19 @@ const FilterModal2 = ({ isOpen, onClose }) => {
 										</div>
 									</div>
 								</div>
-								<div class="col-md-6">
-									<div class="form-group">
+								<div className="col-md-6">
+									<div className="form-group">
 										<label for="">Talent</label>
-										<div class={`dropdown select-checkout ${isTalent?'open':''}`}>
-											<a class="dropdown-toggle btn" onClick={handleOpenTalent} href>
+										<div className={`dropdown select-checkout ${isTalent?'open':''}`}>
+											<a className="dropdown-toggle btn" onClick={handleOpenTalent} href>
 												Select Talent
-											<b class="caret"></b>
+											<b className="caret"></b>
 											</a>
 											{/* <Collapse in={isTalent}> */}
-												<ul class="dropdown-menu dropdown-menu-form" role="menu">
+												<ul className="dropdown-menu dropdown-menu-form" role="menu">
 													{talents.map((talent, index) => (
 													<li key={`talent_${index}`} onClick={(e) => e.stopPropagation()}>
-														<label class="checkbox">
+														<label className="checkbox">
 															<input type="checkbox" />
 															{talent}
 														</label>
@@ -100,23 +100,23 @@ const FilterModal2 = ({ isOpen, onClose }) => {
 									</div>
 								</div>
 							</div>
-							<div class="row">
-								<div class="col-md-6">
-									<div class="form-group">
+							<div className="row">
+								<div className="col-md-6">
+									<div className="form-group">
 										<label for="">Races (Min)</label>
-										<input type="text" class="form-control" name="" id="" />
+										<input type="text" className="form-control" name="" id="" />
 									</div>
 								</div>
-								<div class="col-md-6">
-									<div class="form-group">
+								<div className="col-md-6">
+									<div className="form-group">
 										<label for="">Races (Max)</label>
-										<input type="text" class="form-control" name="" id="" />
+										<input type="text" className="form-control" name="" id="" />
 									</div>
 								</div>
 							</div>
-							<div class="footer-btn">
-								<button type="button" class="btn btn-reset">Reset</button>
-								<button type="button" class="btn btn-filter-modal">Filter</button>
+							<div className="footer-btn">
+								<button type="button" className="btn btn-reset">Reset</button>
+								<button type="button" className="btn btn-filter-modal">Filter</button>
 							</div>
 						</div>
 				</div>
