@@ -604,17 +604,16 @@ export const resultsRacingData = [
 
 /* Filter Option Samples ************************/
 
-export const heritages = ['Serema', 'Sultan', 'Lakenvelder', 'Dorking'];
-
-export const talents = [
-	'Anvil', 'Black Hole', 'Blue Egg', 'Blue Rooster', 'Chickenapult',
- 	'Cold Snap', 'Coober', 'Devolution', 'DIG', 'Fan Group', 'Flight', 'Growth', 'Helicopter', 
- 	'Jetpack', 'Machete', 'Moving Walkway', 'Rollerblades', 'Royal Procession', 'Teleport'
-];
-
-export const peckingOrders = ['A', 'B', 'C', 'Chicks'];
-
-export const racingDistances = [100, 120, 140, 160, 180, 200];
-
-export const terrains = ['Dirt', 'Grass', 'Road', 'Rock', 'Sand', 'Snow', 'Track'];
+export const filterOptions = {
+	heritages: ['Serema', 'Sultan', 'Lakenvelder', 'Dorking'],
+	talents: [
+		'Anvil', 'Black Hole', 'Blue Egg', 'Blue Rooster', 'Chickenapult',
+		'Cold Snap', 'Coober', 'Devolution', 'DIG', 'Fan Group', 'Flight', 'Growth', 'Helicopter', 
+		'Jetpack', 'Machete', 'Moving Walkway', 'Rollerblades', 'Royal Procession', 'Teleport'
+	],
+	peckingOrders: ['A', 'B', 'C', 'Chicks'],
+	racingDistances: [100, 120, 140, 160, 180, 200],
+	terrains: ['Dirt', 'Grass', 'Road', 'Rock', 'Sand', 'Snow', 'Track'],
+	stocks: ['Spicy', 'Robust', 'Fresh', 'Crisp', 'Tender', 'Bland'],
+};
 /************************************************/

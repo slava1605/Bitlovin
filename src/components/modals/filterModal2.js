@@ -1,17 +1,12 @@
 import React, { useState, useEffect } from "react";
-
-const heritages = ['Serema', 'Sultan', 'Lakenvelder', 'Dorking'];
-
-const talents = [
-	'Anvil', 'Black Hole', 'Blue Egg', 'Blue Rooster', 'Chickenapult',
- 	'Cold Snap', 'Coober', 'Devolution', 'DIG', 'Fan Group', 'Flight', 'Growth', 'Helicopter', 
- 	'Jetpack', 'Machete', 'Moving Walkway', 'Rollerblades', 'Royal Procession', 'Teleport'
-];
+import { useRacingContext } from "../../helpers/hooks/useRacingContext";
 
 const FilterModal2 = ({ isOpen, onClose }) => {
 	const [_className, setClassName] = useState('modal fade show');
 	const [isHeritage, setIsHeritage] = useState(false);
 	const [isTalent, setIsTalent] = useState(false);
+	const { filterOptions } = useRacingContext();
+	const { heritages, talents } = filterOptions;
 
 	useEffect(() => {
 		if (isOpen)

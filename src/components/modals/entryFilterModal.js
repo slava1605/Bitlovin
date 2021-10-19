@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from "react";
 import Modal from "react-bootstrap/Modal";
+import { useRacingContext } from "../../helpers/hooks/useRacingContext";
 
 const EntryFilterModal = ({ onClose }) => {
-   const peckingOrders = ['A', 'B', 'C', 'Chicks'];
-   const racingDistances = [100, 120, 140, 160, 180, 200];
-   const terrains = ['Dirt', 'Grass', 'Road', 'Rock', 'Sand', 'Snow', 'Track'];
+   const { filterOptions } = useRacingContext();
+   const { peckingOrders, racingDistances, terrains } = filterOptions;
 
    const [isPeckingOrder, setIsPeckingOrder] = useState(false);
    const [isDistance, setIsDistance] = useState(false);
