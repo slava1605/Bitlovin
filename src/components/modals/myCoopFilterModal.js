@@ -22,14 +22,14 @@ const DropdownFilter = ({ label, options, isOpen = false, initialValues = [] }) 
 				<ul className="dropdown-menu dropdown-menu-form" role="menu">
 					{options.map((option, index) => (
 						<li key={`option_${index}${new Date().getTime()}`}>
-								<label className="checkbox">
+							<label className="checkbox">
 								<input
 									type="checkbox"
 									checked={values[index] === undefined ? false : values[index]}
 									onChange={handleOptionChange(index)}
 								/>
 								{option}
-								</label>
+							</label>
 						</li>
 					))}
 				</ul>
@@ -61,7 +61,7 @@ const MyCoopFilterModal = ({ onClose }) => {
 	};
 
 	return (
-		<div class={`${_className} bs-example-modal-lg my-coop-filter`} tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+		<div className={`${_className} bs-example-modal-lg my-coop-filter`} tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
 			<div className="mask" onClick={handleCloseModal}></div>
 			<div className="modal-dialog modal-lg" role="document">
 				<div className="modal-content">

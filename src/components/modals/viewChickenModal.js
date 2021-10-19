@@ -19,26 +19,26 @@ const ViewChickenModal = ({ chickenData, closeModal }) => {
 	return (
 		<>
 			<div
-				class={`modal fade ${chickenData ? "show" : ""} ${_className}`}
+				className={`modal fade ${chickenData ? "show" : ""} ${_className}`}
 				id="view-chicken"
 				tabindex="-1"
 				role="dialog"
 				aria-labelledby="myModalLabel"
 			>
 				<div className="mask" onClick={handleClose}></div>
-				<div class="modal-dialog" role="document">
-					<div class="modal-content">
-						<div class="modal-header">
-							<button type="button" class="close" onClick={handleClose}>
+				<div className="modal-dialog" role="document">
+					<div className="modal-content">
+						<div className="modal-header">
+							<button type="button" className="close" onClick={handleClose}>
 								<span aria-hidden="true"><img src={CloseIcon} alt="" /></span>
 							</button>
-							<h3 class="modal-title" id="myModalLabel">View Chicken Details</h3>
+							<h3 className="modal-title" id="myModalLabel">View Chicken Details</h3>
 						</div>
-						<div class="modal-body">
-							<div class="chicken-box-sm">
+						<div className="modal-body">
+							<div className="chicken-box-sm">
 								<p> <img src={ChickenThumbnail} alt="" /> </p>
-								<div class="chicken-user">
-									<table class="table">
+								<div className="chicken-user">
+									<table className="table">
 										<thead>
 											<tr>
 												<th>Owner</th>
@@ -54,9 +54,9 @@ const ViewChickenModal = ({ chickenData, closeModal }) => {
 									</table>
 								</div>
 							</div>
-							<div class="chicken-box-lg">
-								<div class="table-responsive">
-									<table class="table">
+							<div className="chicken-box-lg">
+								<div className="table-responsive">
+									<table className="table">
 										<tr>
 											<th>Heritage</th>
 											<th>Perfection</th>
@@ -71,7 +71,7 @@ const ViewChickenModal = ({ chickenData, closeModal }) => {
 											<td>{chickenData?.perfection}%</td>
 											<td>{chickenData?.stock}</td>
 											<td>{chickenData?.talent}</td>
-											<td><span class="text-classwhite">CLASS {chickenData?.class}</span></td>
+											<td><span className="text-classwhite">CLASS {chickenData?.class}</span></td>
 											<td>{chickenData?.pop}</td>
 											<td>{chickenData?.history}</td>
 										</tr>
@@ -94,14 +94,14 @@ const ViewChickenModal = ({ chickenData, closeModal }) => {
 											<td>{chickenData?.eyes}</td>
 										</tr>
 										<tr>
-											<th colspan="1" class="hidden-xs"></th>
+											<th colspan="1" className="hidden-xs"></th>
 											<th>Beak</th>
 											<th>Comb</th>
 											<th>Wattle</th>
 											<th>Background</th>
 										</tr>
 										<tr>
-											<td colspan="1" class="hidden-xs"></td>
+											<td colspan="1" className="hidden-xs"></td>
 											<td>{chickenData?.beak}</td>
 											<td>{chickenData?.comb}</td>
 											<td>{chickenData?.wattle}</td>

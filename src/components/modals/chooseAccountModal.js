@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-
+import MetaMaskImg from "../../assets/images/meta-mask.png";
 
 const ChooseAccountModal = ({ isOpen, onClose}) => {
 	const [_className, setClassName] = useState('modal fade show choose-an-account');
@@ -26,7 +26,7 @@ const ChooseAccountModal = ({ isOpen, onClose}) => {
 							CHOOSE AN ACCOUNT
 						</h3>
 						<div className="blue-box">
-							<p className="text-center"> <img src="images/meta-mask.png" className="meta-mask" alt="" /> </p>
+							<p className="text-center"> <img src={MetaMaskImg} className="meta-mask" alt="" /> </p>
 							<h3>MetaMask</h3>
 							<h4>Browser Extension</h4>
 						</div>
