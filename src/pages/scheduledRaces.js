@@ -1,8 +1,6 @@
 import React, { useState } from "react";
-import TerrainIcon from "../assets/images/terrain.png";
 import { Link } from "react-router-dom";
 import ScheduledFilterModal from "../components/modals/scheduledFilterModal";
-import TerrainImg from "../assets/images/terrain.png";
 import ScheduledRacingTable from "../components/scheduledRacingTable";
 
 const ScheduledRaces = () => {
@@ -22,31 +20,31 @@ const ScheduledRaces = () => {
 							 <li><Link to="/results">Results</Link></li>
 						</ul>
 						<div className="table-buttons">
-							 <div className="filter-btns">									 
+							<div className="filter-btns">									 
+								<div className="buttons">
+										<button class='btn'> Pecking Order: <span className="selected-text">A</span> <i className="fa fa-times"></i></button>
+									</div>
 									<div className="buttons">
-										 <button class='btn'> Pecking Order: <span className="selected-text">A</span> <i className="fa fa-times"></i></button>
-									 </div>
-									 <div className="buttons">
-										 <button class='btn'> Distance: <span className="selected-text">180m</span> <i className="fa fa-times"></i></button>
-									 </div>
-									 <div className="buttons">
-										 <button class='btn'> Terrain: <span className="selected-text">Dirt</span> <i className="fa fa-times"></i></button>
-									 </div>
-									 <p>
-											<a href className="clear-all">Clear All</a>
-									 </p>
-							 </div>
-							 <div>
+										<button class='btn'> Distance: <span className="selected-text">180m</span> <i className="fa fa-times"></i></button>
+									</div>
+									<div className="buttons">
+										<button class='btn'> Terrain: <span className="selected-text">Dirt</span> <i className="fa fa-times"></i></button>
+									</div>
+									<p>
+										<a href className="clear-all">Clear All</a>
+									</p>
+								</div>
+								<div>
 									<a href onClick={handleOpenFilter} className="btn btn-filters">
 										<span className="fa fa-sliders"></span>
 										Filters
 									</a>
-							 </div>
-						</div>
-						<div className="table-responsive">
-							<ScheduledRacingTable />
-						</div>
-				 </div>
+								</div>
+							</div>
+							<div className="table-responsive">
+								<ScheduledRacingTable />
+							</div>
+					</div>
 			</div>
 			{isFilterModal && <ScheduledFilterModal onClose={() => setIsFilterModal(false)} />}
 	 	</div>
