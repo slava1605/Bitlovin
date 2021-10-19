@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import TerrainIcon from "../assets/images/terrain.png";
 import { useRacingContext } from "../helpers/hooks/useRacingContext";
 import ResultsTable from "../components/resultsTable";
-import FilterModal from "../components/modals/filterModal1.js";
+import ResultsFilterModal from "../components/modals/resultsFilterModal.js";
 import { Link } from "react-router-dom";
 
 const Results = () => {
@@ -47,7 +47,7 @@ const Results = () => {
 					</div>
 				</div>
 			</div>
-			{isFilterModal && <FilterModal onClose={() => setIsFilterModal(false)} />}
+			{isFilterModal && <ResultsFilterModal onClose={() => setIsFilterModal(false)} />}
 		</div>
 	)
 };

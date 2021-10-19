@@ -2,49 +2,18 @@ import React, { useState, useEffect } from 'react';
 import { useRacingContext } from '../helpers/hooks/useRacingContext';
 import TerrainIcon from "../assets/images/terrain.png";
 import ChickenImg from "../assets/images/chicken.png";
-import { scheduledRacingData } from "../helpers/testRacing";
 import ViewChickenModal from "./modals/viewChickenModal";
-import SelectChickenModal from "./modals/selectChickenModal";
-import { Collapse } from "react-bootstrap";
 import CollapseTransition from 'react-collapse-transition';
-
-const timeFormat1 = (time) => {
-	const h = Math.floor(time / 3600);
-	const m = Math.floor((time % 3600) / 60);
-	const s = time % 60;
-	let hh = `${h}`;
-	if (hh.length == 1) hh = '0' + hh;
-	let mm = `${m}`;
-	if (mm.length == 1) mm = '0' + mm;
-	let ss = `${s}`;
-	if (ss.length == 1) ss = '0' + ss;
-	return `${hh} : ${mm} : ${ss}`;
-};
-
-const timeFormat2 = (time) => {
-	const h = Math.floor(time / 3600);
-	const m = Math.floor((time % 3600) / 60);
-	const s = time % 60;
-
-	if (h > 0) {
-		return `${h} h ${m} m ${s} s`;
-	} else if (m > 0) {
-		return `${m} m ${s} s`;
-	} else {
-		return `${s} s`;
-	}
-};
+import { timeFormat1, timeFormat2 } from "../utils/timeFormat";
 
 const ScheduledRacingTable = () => {
 	const [openedRow, setOpenedRow] = useState(-1);
 	const [currentRacing, setCurrentRacing] = useState();
-	const [isChickenSelectModal, setIsChickenSelectModal] = useState(false);
+	const { scheduledRacingData } = useRacingContext();
 
 	useEffect(() => {
-		if (scheduledRacingData) {
-			setOpenedRow(-1);
-		}
-	}, [scheduledRacingData]);
+		setOpenedRow(-1);
+	}, []);
 
 	const toggleRacingOpen = (index) => {
 		if (openedRow === index) {
@@ -57,11 +26,6 @@ const ScheduledRacingTable = () => {
 	const closeAllModal = (e) => {
 		// e.stopPropagation();
 		// setCurrentRacing(null);
-	};
-
-	const handleOpenSelectChickenModal = (e) => {
-		e.preventDefault();
-		setIsChickenSelectModal(true);
 	};
 
 	return (
@@ -150,7 +114,6 @@ const ScheduledRacingTable = () => {
 									</CollapseTransition>
 								</td>
 							</tr>
-							
 						</>
 					))}
 				</tbody>

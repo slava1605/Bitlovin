@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import TerrainIcon from "../assets/images/terrain.png";
 import { useRacingContext } from "../helpers/hooks/useRacingContext";
-import RacingTable from "../components/racingTable";
-import FilterModal from "../components/modals/filterModal1.js";
+import EntryRacingTable from "../components/entryRacingTable";
+import EntryFilterModal from "../components/modals/entryFilterModal.js";
 import { Link } from "react-router-dom";
 
 const Main = () => {
@@ -32,11 +32,11 @@ const Main = () => {
 							</div>
 						</div>
 						<div className="table-responsive">
-							<RacingTable />
+							<EntryRacingTable />
 						</div>
 				</div>
 			</div>
-			{isFilterModal && <FilterModal onClose={() => setIsFilterModal(false)} />}
+			{isFilterModal && <EntryFilterModal onClose={() => setIsFilterModal(false)} />}
 		</div>
 	)
 };

@@ -85,3 +85,8 @@
 #filter-popup2 ul li {
 	display: list-item;
 }
+
+.footer-btn button {
+	margin-left: 2px;
+	margin-right: 2px;
+}

@@ -3,22 +3,17 @@ import React, { useState, useEffect } from 'react';
 import { useRacingContext } from '../helpers/hooks/useRacingContext';
 import TerrainIcon from "../assets/images/terrain.png";
 import ChickenImg from "../assets/images/chicken.png";
-import { resultsRacingData } from "../helpers/testRacing";
 import ViewChickenModal from "./modals/viewChickenModal";
-import SelectChickenModal from "./modals/selectChickenModal";
-import { Collapse } from "react-bootstrap";
 import CollapseTransition from 'react-collapse-transition';
 
 const ResultsTable = () => {
 	const [openedRow, setOpenedRow] = useState(-1);
 	const [currentRacing, setCurrentRacing] = useState();
-	const [isChickenSelectModal, setIsChickenSelectModal] = useState(false);
+	const { resultsRacingData } = useRacingContext();
 
 	useEffect(() => {
-		if (resultsRacingData) {
-			setOpenedRow(-1);
-		}
-	}, [resultsRacingData]);
+		setOpenedRow(-1);
+	}, []);
 
 	const toggleRacingOpen = (index) => {
 		if (openedRow === index) {
@@ -31,11 +26,6 @@ const ResultsTable = () => {
 	const closeAllModal = (e) => {
 		// e.stopPropagation();
 		// setCurrentRacing(null);
-	};
-
-	const handleOpenSelectChickenModal = (e) => {
-		e.preventDefault();
-		setIsChickenSelectModal(true);
 	};
 
 	return (

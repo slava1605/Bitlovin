@@ -75,11 +75,11 @@ const Header = () => {
 								>
 									Chickens <span className="caret"></span></a>
 								<ul className="dropdown-menu">
-									<li><a href="#">My Coop</a></li>
-									<li><a href="#">Search</a></li>
+									<li><Link to="/my-coop">My Coop</Link></li>
+									<li><a href>Search</a></li>
 								</ul>
 						</li>
-						<li><a href="#">Tutorial</a></li>
+						<li><a href>Tutorial</a></li>
 						<li>
 							<div className="pricing-section">
 								<div

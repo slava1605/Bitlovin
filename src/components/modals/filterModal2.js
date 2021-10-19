@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import Collapse from "react-bootstrap/Collapse";
 
 const heritages = ['Serema', 'Sultan', 'Lakenvelder', 'Dorking'];
 

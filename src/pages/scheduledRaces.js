@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import TerrainIcon from "../assets/images/terrain.png";
 import { Link } from "react-router-dom";
-import FilterModal from "../components/modals/filterModal1";
+import ScheduledFilterModal from "../components/modals/scheduledFilterModal";
 import TerrainImg from "../assets/images/terrain.png";
 import ScheduledRacingTable from "../components/scheduledRacingTable";
 
@@ -49,7 +49,7 @@ const ScheduledRaces = () => {
 						</div>
 				 </div>
 			</div>
-			{isFilterModal && <FilterModal onClose={() => setIsFilterModal(false)} />}
+			{isFilterModal && <ScheduledFilterModal onClose={() => setIsFilterModal(false)} />}
 	 	</div>
 	)
 };

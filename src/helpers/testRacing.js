@@ -1,5 +1,6 @@
+/* Racing Data Samples **************************/
 
-export const racingData = [
+export const entryRacingData = [
 	{
 		event: 'Juvinile Jubile',
 		location: 'US San Francisco',
@@ -397,7 +398,6 @@ export const scheduledRacingData = [
 	}
 ];
 
-
 export const resultsRacingData = [
 	{
 		event: 'Juvinile Jubile',
@@ -600,3 +600,21 @@ export const resultsRacingData = [
 		]
 	}
 ];
+/************************************************/
+
+/* Filter Option Samples ************************/
+
+export const heritages = ['Serema', 'Sultan', 'Lakenvelder', 'Dorking'];
+
+export const talents = [
+	'Anvil', 'Black Hole', 'Blue Egg', 'Blue Rooster', 'Chickenapult',
+ 	'Cold Snap', 'Coober', 'Devolution', 'DIG', 'Fan Group', 'Flight', 'Growth', 'Helicopter', 
+ 	'Jetpack', 'Machete', 'Moving Walkway', 'Rollerblades', 'Royal Procession', 'Teleport'
+];
+
+export const peckingOrders = ['A', 'B', 'C', 'Chicks'];
+
+export const racingDistances = [100, 120, 140, 160, 180, 200];
+
+export const terrains = ['Dirt', 'Grass', 'Road', 'Rock', 'Sand', 'Snow', 'Track'];
+/************************************************/

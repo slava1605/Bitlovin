@@ -17,6 +17,7 @@ import Header from './components/header';
 import Main from './pages/main';
 import ScheduledRaces from './pages/scheduledRaces';
 import Results from './pages/result';
+import MyCoop from './pages/myCoop';
 
 ReactDOM.render(
   <React.StrictMode>
@@ -33,6 +34,12 @@ ReactDOM.render(
             <Header />
             <AuthCheck allowAnon>
               <Results />
+            </AuthCheck>
+          </Route>
+          <Route path="/my-coop">
+            <Header />
+            <AuthCheck allowAnon>
+              <MyCoop />
             </AuthCheck>
           </Route>
           <Route path="/">

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Modal from "react-bootstrap/Modal";
 
-const FilterModal = ({ onClose }) => {
+const EntryFilterModal = ({ onClose }) => {
    const peckingOrders = ['A', 'B', 'C', 'Chicks'];
    const racingDistances = [100, 120, 140, 160, 180, 200];
    const terrains = ['Dirt', 'Grass', 'Road', 'Rock', 'Sand', 'Snow', 'Track'];
@@ -145,4 +145,4 @@ const FilterModal = ({ onClose }) => {
 	)
 };
 
-export default FilterModal;
+export default EntryFilterModal;
