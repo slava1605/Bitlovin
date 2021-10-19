@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
 import { useRacingContext } from "../../helpers/hooks/useRacingContext";
 
-const DropdownFilter = ({ label, options }) => {
-	const [opened, setOpened] = useState(false);
-	const [values, setValues] = useState([]);
+const DropdownFilter = ({ label, options, isOpen = false, initialValues = [] }) => {
+	const [opened, setOpened] = useState(isOpen);
+	const [values, setValues] = useState(initialValues);
 
 	const handleOptionChange = (index) => (e) => {
 		let temp = JSON.parse(JSON.stringify(values));
