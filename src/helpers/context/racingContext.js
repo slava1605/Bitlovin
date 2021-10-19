@@ -1,6 +1,6 @@
 import React from 'react';
 import { createContext, useState, useEffect, useRef, useMemo } from "react";
-import * as racingData from "../testRacing";
+import * as racingData from "../racingData";
 
 export const RacingContext = createContext({});
 
