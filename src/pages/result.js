@@ -1,6 +1,4 @@
 import React, { useState } from "react";
-import TerrainIcon from "../assets/images/terrain.png";
-import { useRacingContext } from "../helpers/hooks/useRacingContext";
 import ResultsTable from "../components/resultsTable";
 import ResultsFilterModal from "../components/modals/resultsFilterModal.js";
 import { Link } from "react-router-dom";
