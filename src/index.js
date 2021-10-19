@@ -18,6 +18,8 @@ import Main from './pages/main';
 import ScheduledRaces from './pages/scheduledRaces';
 import Results from './pages/result';
 import MyCoop from './pages/myCoop';
+import RacingPending from './pages/racingPending';
+import RacingResult from './pages/racingResult';
 
 ReactDOM.render(
   <React.StrictMode>
@@ -40,6 +42,18 @@ ReactDOM.render(
             <Header />
             <AuthCheck allowAnon>
               <MyCoop />
+            </AuthCheck>
+          </Route>
+          <Route path="/racing-pending">
+            <Header />
+            <AuthCheck allowAnon>
+              <RacingPending />
+            </AuthCheck>
+          </Route>
+          <Route path="/racing-result">
+            <Header />
+            <AuthCheck allowAnon>
+              <RacingResult />
             </AuthCheck>
           </Route>
           <Route path="/">

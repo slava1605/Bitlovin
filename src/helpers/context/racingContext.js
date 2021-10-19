@@ -14,6 +14,7 @@ export const RacingProvider = ({ children }) => {
 				entryRacingData: racingData.entryRacingData,
 				scheduledRacingData: racingData.scheduledRacingData,
 				resultsRacingData: racingData.resultsRacingData,
+				racingPendingData: racingData.racingPendingData,
 				filterOptions: racingData.filterOptions,
 				headerFocus,
 				setHeaderFocus,

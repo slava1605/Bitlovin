@@ -24,8 +24,6 @@ const ViewChickenModal = ({ chickenData, closeModal }) => {
 				tabindex="-1"
 				role="dialog"
 				aria-labelledby="myModalLabel"
-				// style={chickenData ? { display: 'block' } : {display: 'none'}}
-				// style={{display: 'block'}}
 			>
 				<div className="mask" onClick={handleClose}></div>
 				<div class="modal-dialog" role="document">
@@ -116,7 +114,7 @@ const ViewChickenModal = ({ chickenData, closeModal }) => {
 					</div>
 				</div>
 			</div>
-		</>	
+		</>
 	)
 };
 

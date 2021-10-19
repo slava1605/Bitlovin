@@ -600,6 +600,81 @@ export const resultsRacingData = [
 		]
 	}
 ];
+
+export const racingPendingData = [
+	{
+		lane: 1,
+		event: 'Wilber',
+		talent: 'Talent',
+		heritage: 'Dorking',
+		perfection: 96,
+		stock: 'Stock',
+	},
+	{
+		lane: 2,
+		event: 'Wilber',
+		talent: 'Talent',
+		heritage: 'Dorking',
+		perfection: 96,
+		stock: 'Stock',
+	},
+	{
+		lane: 3,
+		event: 'Wilber',
+		talent: 'Talent',
+		heritage: 'Dorking',
+		perfection: 96,
+		stock: 'Stock',
+	},
+	{
+		lane: 4,
+		event: 'Wilber',
+		talent: 'Talent',
+		heritage: 'Dorking',
+		perfection: 96,
+		stock: 'Stock',
+	},
+	{
+		lane: 5,
+		event: 'Wilber',
+		talent: 'Talent',
+		heritage: 'Dorking',
+		perfection: 96,
+		stock: 'Stock',
+	},
+	{
+		lane: 6,
+		event: 'Wilber',
+		talent: 'Talent',
+		heritage: 'Dorking',
+		perfection: 96,
+		stock: 'Stock',
+	},
+	{
+		lane: 7,
+		event: 'Wilber',
+		talent: 'Talent',
+		heritage: 'Dorking',
+		perfection: 96,
+		stock: 'Stock',
+	},
+	{
+		lane: 8,
+		event: 'Wilber',
+		talent: 'Talent',
+		heritage: 'Dorking',
+		perfection: 96,
+		stock: 'Stock',
+	},
+	{
+		lane: 9,
+		event: 'Wilber',
+		talent: 'Talent',
+		heritage: 'Dorking',
+		perfection: 96,
+		stock: 'Stock',
+	}
+];
 /************************************************/
 
 /* Filter Option Samples ************************/

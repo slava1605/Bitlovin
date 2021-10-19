@@ -22,8 +22,7 @@ const ScheduledRaces = () => {
 							 <li><Link to="/results">Results</Link></li>
 						</ul>
 						<div className="table-buttons">
-							 <div className="filter-btns">
-										 
+							 <div className="filter-btns">									 
 									<div className="buttons">
 										 <button class='btn'> Pecking Order: <span className="selected-text">A</span> <i className="fa fa-times"></i></button>
 									 </div>
