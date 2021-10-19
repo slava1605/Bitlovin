@@ -23,12 +23,12 @@ const Results = () => {
 					</ul>
 					<div class="result-filter">
 						<div>
-								<label class="switch">
-									<input type="checkbox" class="switch-input" />
-									<span class="switch-label" ></span>
-									<span class="switch-handle"></span>
-								</label>
-								<span class="my-chicken">My Chickens Only</span>
+							<label class="switch">
+								<input type="checkbox" class="switch-input" />
+								<span class="switch-label" ></span>
+								<span class="switch-handle"></span>
+							</label>
+							<span class="my-chicken">My Chickens Only</span>
 						</div>
 						<div>
 								<div class="race-result">

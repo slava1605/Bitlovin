@@ -68,16 +68,16 @@ const Header = () => {
 							</ul>
 						</li>
 						<li className={`dropdown ${isChecken ? "open" : ''}`}>
-								<a
-									href="/"
-									className="dropdown-toggle"
-									onClick={toggleChicken}
-								>
-									Chickens <span className="caret"></span></a>
-								<ul className="dropdown-menu">
-									<li><Link to="/my-coop">My Coop</Link></li>
-									<li><a href>Search</a></li>
-								</ul>
+							<a
+								href="/"
+								className="dropdown-toggle"
+								onClick={toggleChicken}
+							>
+								Chickens <span className="caret"></span></a>
+							<ul className="dropdown-menu">
+								<li><Link to="/my-coop">My Coop</Link></li>
+								<li><a href>Search</a></li>
+							</ul>
 						</li>
 						<li><a href>Tutorial</a></li>
 						<li>

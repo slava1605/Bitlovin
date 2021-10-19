@@ -1,7 +1,4 @@
 import React, { useState } from "react";
-import TerrainIcon from "../assets/images/terrain.png";
-import { useRacingContext } from "../helpers/hooks/useRacingContext";
-import { Link } from "react-router-dom";
 import MyCoopFilterModal from "../components/modals/myCoopFilterModal";
 
 const MyCoop = () => {

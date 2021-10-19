@@ -18,22 +18,22 @@ const Main = () => {
 		<div className="table-section" onClick={() => setHeaderFocus(!headerFocus)}>
 			<div className="container">
 				<div className="table-box">
-						<ul>
-							<li className="active"><Link to="/">Enter Race</Link></li>
-							<li><Link to="scheduled-races">Scheduled Races</Link></li>
-							<li><Link to="/results">Results</Link></li>
-						</ul>
-						<div className="table-buttons">
-							<div>
-									<a href className="btn btn-races">Open Races</a>
-							</div>
-							<div>
-								<a onClick={handleOpenFilterModal} className="btn btn-filters" href><span className="fa fa-sliders"></span>  Filters</a>
-							</div>
+					<ul>
+						<li className="active"><Link to="/">Enter Race</Link></li>
+						<li><Link to="scheduled-races">Scheduled Races</Link></li>
+						<li><Link to="/results">Results</Link></li>
+					</ul>
+					<div className="table-buttons">
+						<div>
+							<a href className="btn btn-races">Open Races</a>
 						</div>
-						<div className="table-responsive">
-							<EntryRacingTable />
+						<div>
+							<a onClick={handleOpenFilterModal} className="btn btn-filters" href><span className="fa fa-sliders"></span>  Filters</a>
 						</div>
+					</div>
+					<div className="table-responsive">
+						<EntryRacingTable />
+					</div>
 				</div>
 			</div>
 			{isFilterModal && <EntryFilterModal onClose={() => setIsFilterModal(false)} />}
