@@ -18,7 +18,7 @@ const SelectChickenModal = ({ isOpen, onClose }) => {
 		setTimeout(()=>onClose(), 350);
 	};
 
-	const handleFilter2 = (e) => {
+	const handleOpenFilter2 = (e) => {
 		e.preventDefault();
 		setIsFilter2(true);
 	};
@@ -45,7 +45,7 @@ const SelectChickenModal = ({ isOpen, onClose }) => {
 								<input type="text" className="form-control customInput" placeholder="Chicken Name" />
 							</div>
 							<div>
-								<a href onClick={handleFilter2} className="btn btn-filters">
+								<a href onClick={handleOpenFilter2} className="btn btn-filters">
 									<span className="fa fa-sliders"></span>
 									Filters
 								</a>
