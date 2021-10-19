@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import Modal from "react-bootstrap/Modal";
 import { useRacingContext } from "../../helpers/hooks/useRacingContext";
 
-const EntryFilterModal = ({ onClose }) => {
+const ResultFilterModal = ({ onClose }) => {
 	const { filterOptions } = useRacingContext();
 	const { peckingOrders, racingDistances, terrains } = filterOptions;
 
@@ -145,4 +145,4 @@ const EntryFilterModal = ({ onClose }) => {
 	)
 };
 
-export default EntryFilterModal;
+export default ResultFilterModal;
