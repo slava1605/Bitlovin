@@ -3,7 +3,7 @@ import CloseIcon from "../../assets/images/close-icon.png";
 
 const TransactionConfirmationModal = ({ isOpen, onClose }) => {
 	const [_className, setClassName] = useState('modal fade show');
-
+	
 	useEffect(() => {
 		if (isOpen)
 			setClassName('modal fade in');

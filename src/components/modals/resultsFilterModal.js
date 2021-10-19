@@ -136,7 +136,6 @@ const EntryFilterModal = ({ onClose }) => {
 							<div className="footer-btn">
 								<button type="button" className="btn btn-reset">Reset</button>
 								<button type="button" className="btn btn-filter-modal">Filter</button>
-								<button ytpe="button" className="btn btn-filter-modal"></button>
 							</div>
 						</div>
 					</div>
