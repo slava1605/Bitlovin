@@ -13,7 +13,7 @@ const Header = () => {
 	const { headerFocus, setHeaderFocus } = useRacingContext();
 	const [isMobileMenuOpened, setMobileMenuOpened] = useState(false);
 	const [isMobile, setIsMobile] = useState(checkIfMobile());
-	
+
 	useEffect(() => {
 		setMobileMenuOpened(false);
 		window.addEventListener("resize", handleResize);
@@ -54,7 +54,6 @@ const Header = () => {
 	return (
 		<div className="navbar navbar-default mynav" onClick={() => setHeaderFocus(!headerFocus)}>
 			<div className="container">
-				{/* Brand and toggle get grouped for better mobile display */}
 				<div className="navbar-header">
 					<button type="button" className={`navbar-toggle ${!isMobileMenuOpened?"collapsed":""}`} onClick={handleMobileMenu}>
 						<span className="sr-only">Toggle navigation</span>

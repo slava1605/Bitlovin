@@ -22,7 +22,7 @@ const ScheduledRacingTable = () => {
 			setOpenedRow(index);
 		}
 	};
-
+	
 	const closeAllModal = (e) => {
 		// e.stopPropagation();
 		// setCurrentRacing(null);
