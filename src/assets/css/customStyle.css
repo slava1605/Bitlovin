@@ -90,3 +90,38 @@
 	margin-left: 2px;
 	margin-right: 2px;
 }
+
+.racing-pending ul {
+	display: inline-flex;
+	flex-wrap: wrap;
+	align-items: center;
+}
+
+.collapsing-out{
+	position: relative;
+    overflow: hidden;
+    transition-timing-function: ease;
+    transition-duration: .35s;
+    transition-property: height,visibility,display;
+}
+
+.collapsing-in {
+	position: relative;
+	/* transition: height 0.3s ease-in-out 0s, padding-top 0.3 ease-in-out 0s, padding-bottom 0.3 ease-in-out 0s !important; */
+	overflow: hidden;
+    transition-timing-function: ease;
+    transition-duration: .35s;
+    transition-property: height,visibility,display;
+	height: 194px;
+	display: block !important;
+}
+
+.navbar .container>div {
+	overflow: visible !important;
+}
+
+@media (max-width: 768px) {
+	.navbar .container>div {
+		overflow: hidden !important;
+	}
+}

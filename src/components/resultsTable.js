@@ -72,7 +72,7 @@ const ResultsTable = () => {
 												<div>
 												</div>
 												<div>
-													<a href="#" data-toggle="modal" data-target="#select-chicken" className="btn btn-enter">Watch Reply</a>
+													<a href="/racing-result" target="_blank" className="btn btn-enter">Watch Reply</a>
 												</div>
 											</div>
 											<table className="table">

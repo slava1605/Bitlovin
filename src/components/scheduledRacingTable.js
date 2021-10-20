@@ -67,7 +67,6 @@ const ScheduledRacingTable = () => {
 							<tr key={`${index}_row_1`}>
 								<td colspan="8" className={'hiddenRow'}>
 									<CollapseTransition visible={openedRow === index}>
-										{/* <div className={`accordian-body collapse ${openedRow === index ? " in" : "out"}`} id="demo1" style={{transition: 'height 0.35'}}> */}
 										<div className={`accordian-body`} id="demo1">
 											<div className="top-heading">
 												<div>
@@ -78,7 +77,7 @@ const ScheduledRacingTable = () => {
 													</h4>
 												</div>
 												<div>
-													<a href data-toggle="modal" data-target="#select-watch" className="btn btn-enter">Watch</a>
+													<a href="/racing-pending" target="_blank" className="btn btn-enter">Watch</a>
 												</div>
 											</div>
 											
