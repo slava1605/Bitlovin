@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import LoaderGif from "../../assets/images/loader.gif";
 
 const CompleteTransactionModal = ({ isOpen, onClose }) => {
@@ -19,7 +19,7 @@ const CompleteTransactionModal = ({ isOpen, onClose }) => {
 	};
 
   return (
-		<div className={_className} id="complete-transaction" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+		<div className={_className} id="complete-transaction">
 			<div className="mask" onClick={handleClose}></div>
 			<div className="modal-dialog">
 				<div className="modal-content">

@@ -12,6 +12,7 @@ import './assets/css/customStyle.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { RacingProvider } from './helpers/context/racingContext';
+import { AuthProvider } from './helpers/context/authContext';
 import AuthCheck from './components/authCheck';
 import Header from './components/header';
 import Main from './pages/main';
@@ -23,49 +24,50 @@ import RacingResult from './pages/racingResult';
 
 ReactDOM.render(
   <React.StrictMode>
-    <RacingProvider>
-      <Router>
-        <Switch>
-          <Route path="/scheduled-races">
-            <Header />
-            <AuthCheck allowAnon>
-              <ScheduledRaces />
-            </AuthCheck>
-          </Route>
-          <Route path="/results">
-            <Header />
-            <AuthCheck allowAnon>
-              <Results />
-            </AuthCheck>
-          </Route>
-          <Route path="/my-coop">
-            <Header />
-            <AuthCheck allowAnon>
-              <MyCoop />
-            </AuthCheck>
-          </Route>
-          <Route path="/racing-pending">
-            <Header />
-            <AuthCheck allowAnon>
-              <RacingPending />
-            </AuthCheck>
-          </Route>
-          <Route path="/racing-result">
-            <Header />
-            <AuthCheck allowAnon>
-              <RacingResult />
-            </AuthCheck>
-          </Route>
-          <Route path="/">
-            <Header />
-            <AuthCheck allowAnon>
-              <Main />
-            </AuthCheck>
-          </Route>
-          
-        </Switch>
-      </Router>
-    </RacingProvider>
+    <AuthProvider>
+      <RacingProvider>
+        <Router>
+          <Switch>
+            <Route path="/scheduled-races">
+              <Header />
+              <AuthCheck allowAnon>
+                <ScheduledRaces />
+              </AuthCheck>
+            </Route>
+            <Route path="/results">
+              <Header />
+              <AuthCheck allowAnon>
+                <Results />
+              </AuthCheck>
+            </Route>
+            <Route path="/my-coop">
+              <Header />
+              <AuthCheck allowAnon>
+                <MyCoop />
+              </AuthCheck>
+            </Route>
+            <Route path="/racing-pending">
+              <Header />
+              <AuthCheck allowAnon>
+                <RacingPending />
+              </AuthCheck>
+            </Route>
+            <Route path="/racing-result">
+              <Header />
+              <AuthCheck allowAnon>
+                <RacingResult />
+              </AuthCheck>
+            </Route>
+            <Route path="/">
+              <Header />
+              <AuthCheck allowAnon>
+                <Main />
+              </AuthCheck>
+            </Route>
+          </Switch>
+        </Router>
+      </RacingProvider>
+    </AuthProvider>
   </React.StrictMode>,
   document.getElementById('root')
 );

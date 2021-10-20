@@ -61,7 +61,7 @@ const MyCoopFilterModal = ({ onClose }) => {
 	};
 
 	return (
-		<div className={`${_className} bs-example-modal-lg my-coop-filter`} tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+		<div className={`${_className} bs-example-modal-lg my-coop-filter`}>
 			<div className="mask" onClick={handleCloseModal}></div>
 			<div className="modal-dialog modal-lg" role="document">
 				<div className="modal-content">

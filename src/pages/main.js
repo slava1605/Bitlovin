@@ -4,10 +4,12 @@ import { useRacingContext } from "../helpers/hooks/useRacingContext";
 import EntryRacingTable from "../components/entryRacingTable";
 import EntryFilterModal from "../components/modals/entryFilterModal.js";
 import { Link } from "react-router-dom";
+import NoChickenModal from "../components/modals/noChickenModal";
 
 const Main = () => {
 	const { headerFocus, setHeaderFocus } = useRacingContext();
 	const [isFilterModal, setIsFilterModal] = useState(false);
+	const [isChickenAvailable, setChickenAvailable] = useState(false);
 
 	const handleOpenFilterModal = (e) => {
 		e.preventDefault();
@@ -37,6 +39,7 @@ const Main = () => {
 				</div>
 			</div>
 			{isFilterModal && <EntryFilterModal onClose={() => setIsFilterModal(false)} />}
+			{!isChickenAvailable && <NoChickenModal isOpen={!isChickenAvailable} onClose={(e) => setChickenAvailable(true)} />}
 		</div>
 	)
 };

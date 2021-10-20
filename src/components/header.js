@@ -13,7 +13,7 @@ const Header = () => {
 	const { headerFocus, setHeaderFocus } = useRacingContext();
 	const [isMobileMenuOpened, setMobileMenuOpened] = useState(false);
 	const [isMobile, setIsMobile] = useState(checkIfMobile());
-
+	
 	useEffect(() => {
 		setMobileMenuOpened(false);
 		window.addEventListener("resize", handleResize);
@@ -130,15 +130,16 @@ const Header = () => {
 								<div className="pricing-section">
 									<div
 										className="show-width"
-										style={isShow ? {visibility: 'visible'} : {visibility: 'hidden'}}
 									>
-										<ul className="balance-sheet">
+										<ul
+											className={`balance-sheet collapsing-width ${isShow?"collapse-width-in":"collapse-width-out"}`}
+										>
 											<li>ETH BALANCE <span>$0.00 USD</span></li>
 											<li>WETH BALANCE <span>$148.86 USD</span></li>
 										</ul>
 									</div>
 									<a
-										href="/"
+										href
 										onClick={toggleShow}
 										className="icon-show"
 									>

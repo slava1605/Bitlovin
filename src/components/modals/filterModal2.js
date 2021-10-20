@@ -44,7 +44,7 @@ const FilterModal2 = ({ isOpen, onClose }) => {
 	};
 
 	return (
-		<div className={_className} id="filter-popup2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+		<div className={_className} id="filter-popup2">
 			{isOpen && <div className="mask" onClick={handleClose}></div>}
 			<div className="modal-dialog" role="document">
 				<div className="modal-content">

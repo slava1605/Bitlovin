@@ -116,6 +116,31 @@
 	display: block !important;
 }
 
+.collapsing-width {
+	position: relative;
+	/* transition: height 0.3s ease-in-out 0s, padding-top 0.3 ease-in-out 0s, padding-bottom 0.3 ease-in-out 0s !important; */
+	overflow: hidden;
+    transition-timing-function: ease;
+    transition-duration: .1s;
+    transition-property: width,visibility,font-size,height;
+}
+
+.collapse-width-in {
+	visibility: visible;
+	width: 220px;
+	height: 50px;
+}
+
+.collapse-width-out {
+	visibility: visible;
+	width: 1px;
+	height: 1px;
+}
+
+.show-width {
+	height: 50px;
+}
+
 .navbar .container>div {
 	overflow: visible !important;
 }

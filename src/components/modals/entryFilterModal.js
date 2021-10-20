@@ -61,7 +61,7 @@ const EntryFilterModal = ({ onClose }) => {
                            <div className="form-group">
                               <label for="">Pecking Order</label>
                               <div className={`dropdown select-checkout ${isPeckingOrder?' open': ''}`}>
-                                 <a onClick={handleTogglePeckingOrder} className="dropdown-toggle btn" data-toggle="dropdown" href>
+                                 <a onClick={handleTogglePeckingOrder} className="dropdown-toggle btn" href>
                                     Select Pecking Order
                                     <b className="caret"></b>
                                  </a>

@@ -1,9 +1,10 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 const NoChickenModal = ({ isOpen, onClose }) => {
 	const [_className, setClassName] = useState('modal fade show no-chicken');
 
 	useEffect(() => {
+		console.log(isOpen);
 		if (isOpen)
 			setClassName('modal fade no-chicken in');
 	}, [isOpen]);
@@ -17,8 +18,8 @@ const NoChickenModal = ({ isOpen, onClose }) => {
 	};
 
   return (
-		<div className={_className} id="no-chicken" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-			<div classname="mask" onClick={handleClose}></div>
+		<div className={_className} id="no-chicken">
+			<div className="mask" onClick={handleClose}></div>
 			<div className="modal-dialog">
 				<div className="modal-content">
 					<div className="modal-body">

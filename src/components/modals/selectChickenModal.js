@@ -2,10 +2,12 @@ import React, {useState, useEffect} from "react";
 import CloseIcon from "../../assets/images/close-icon.png";
 import ChickenImg from "../../assets/images/chicken.png";
 import FilterModal2 from "./filterModal2";
+import TransactionConfirmationModal from "./transactionConfirmationModal";
 
 const SelectChickenModal = ({ isOpen, onClose }) => {
 	const [_className, setClassName] = useState('');
 	const [isFilter2, setIsFilter2] = useState(false);
+	const [isTransactionConfirmation, setTransactionConfirmation] = useState(false);
 
 	useEffect(() => {
 		if (isOpen)
@@ -23,13 +25,17 @@ const SelectChickenModal = ({ isOpen, onClose }) => {
 		setIsFilter2(true);
 	};
 
+	const handleTransactionConfirmation = (e) => {
+		setTransactionConfirmation(true);
+	};
+
 	return (
-		<div className={`modal fade ${isOpen ? "show": ""} ${_className}`} id="select-chicken" tabIndex="-1" role="dialog" ariaLabelledBy="myModalLabel">
+		<div className={`modal fade ${isOpen ? "show": ""} ${_className}`} id="select-chicken">
 			<div className="mask" onClick={handleClose}></div>
 			<div className="modal-dialog" role="document">
 				<div className="modal-content">
 					<div className="modal-header">
-						<button onClick={handleClose} type="button" className="close" data-dismiss="modal" aria-label="Close">
+						<button onClick={handleClose} type="button" className="close">
 							<span aria-hidden="true"><img src={CloseIcon} alt="" /></span>
 						</button>
 						<h3 className="modal-title" id="myModalLabel">Juvinile Jubile
@@ -71,7 +77,7 @@ const SelectChickenModal = ({ isOpen, onClose }) => {
 									<td>12</td>
 									<td>2/0/4</td>
 									<td>Talent</td>
-									<td><a href data-toggle="modal" data-dismiss="modal" data-target="#transaction-confirmation"  className="btnEnter">Enter</a></td>
+									<td><a href onClick={handleTransactionConfirmation} className="btnEnter">Enter</a></td>
 								</tr>
 								<tr>
 									<td><img src={ChickenImg} className="img-pic" alt="" /></td>
@@ -81,7 +87,7 @@ const SelectChickenModal = ({ isOpen, onClose }) => {
 									<td>12</td>
 									<td>2/0/4</td>
 									<td>Talent</td>
-									<td><a href data-toggle="modal" data-dismiss="modal" data-target="#transaction-confirmation"  className="btnEnter">Enter</a></td>
+									<td><a href onClick={handleTransactionConfirmation} className="btnEnter">Enter</a></td>
 								</tr>
 								<tr>
 									<td><img src={ChickenImg} className="img-pic" alt="" /></td>
@@ -91,7 +97,7 @@ const SelectChickenModal = ({ isOpen, onClose }) => {
 									<td>12</td>
 									<td>2/0/4</td>
 									<td>Talent</td>
-									<td><a href data-toggle="modal" data-dismiss="modal" data-target="#transaction-confirmation"  className="btnEnter">Enter</a></td>
+									<td><a href onClick={handleTransactionConfirmation} className="btnEnter">Enter</a></td>
 								</tr>
 								<tr>
 									<td><img src={ChickenImg} className="img-pic" alt="" /></td>
@@ -101,7 +107,7 @@ const SelectChickenModal = ({ isOpen, onClose }) => {
 									<td>12</td>
 									<td>2/0/4</td>
 									<td>Talent</td>
-									<td><a href data-toggle="modal" data-dismiss="modal" data-target="#transaction-confirmation"  className="btnEnter">Enter</a></td>
+									<td><a href onClick={handleTransactionConfirmation} className="btnEnter">Enter</a></td>
 								</tr>
 								<tr>
 									<td><img src={ChickenImg} className="img-pic" alt="" /></td>
@@ -111,12 +117,18 @@ const SelectChickenModal = ({ isOpen, onClose }) => {
 									<td>12</td>
 									<td>2/0/4</td>
 									<td>Talent</td>
-									<td><a href data-toggle="modal" data-dismiss="modal" data-target="#transaction-confirmation"  className="btnEnter">Enter</a></td>
+									<td><a href onClick={handleTransactionConfirmation} className="btnEnter">Enter</a></td>
 								</tr>
 							</tbody>
 						</table>
 					</div>
 					{isFilter2 && <FilterModal2 isOpen={isFilter2} onClose={() => setIsFilter2(false)} />}
+					{isTransactionConfirmation &&
+						<TransactionConfirmationModal
+							isOpen={isTransactionConfirmation}
+							onClose={(e) => setTransactionConfirmation(false)}
+						/>
+					}
 				</div>
 			</div>
 		</div>

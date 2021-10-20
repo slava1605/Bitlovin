@@ -1,9 +1,11 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import CloseIcon from "../../assets/images/close-icon.png";
+import CompleteTransactionModal from "./completeTransactionModal";
 
 const TransactionConfirmationModal = ({ isOpen, onClose }) => {
 	const [_className, setClassName] = useState('modal fade show');
-	
+	const [isCompleteTransaction, setCompleteTransaction] = useState(false);
+
 	useEffect(() => {
 		if (isOpen)
 			setClassName('modal fade in');
@@ -17,8 +19,12 @@ const TransactionConfirmationModal = ({ isOpen, onClose }) => {
 		}, 350);
 	};
 
+	const handleCompleteTransaction = (e) => {
+		setCompleteTransaction(true);
+	};
+
 	return (
-		<div className={_className} id="transaction-confirmation" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+		<div className={_className} id="transaction-confirmation">
 			<div className="mask" onClick={handleClose}></div>
 			<div className="modal-dialog" role="document">
 				<div className="modal-content">
@@ -40,11 +46,17 @@ const TransactionConfirmationModal = ({ isOpen, onClose }) => {
 						</h4>
 						<div className="bottom-btn">
 							<a href="" className="btn btn-go">GO BACK</a>
-							<a href="$" data-toggle="modal" data-target="#complete-transaction" className="btn btn-confirm" data-dismiss="modal">CONFIRM</a>
+							<a href className="btn btn-confirm" onClick={handleCompleteTransaction}>CONFIRM</a>
 						</div>
 					</div>
 				</div>
 			</div>
+			{isCompleteTransaction &&
+				<CompleteTransactionModal
+					isOpen={isCompleteTransaction}
+					onClose={(e) => setCompleteTransaction(false)}
+				/>
+			}
 		</div>
 	)
 };

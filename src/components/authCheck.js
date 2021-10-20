@@ -1,5 +1,7 @@
 import React, { useContext } from "react";
-// import { AuthContext } from "../helpers/context/authContext";
+import { AuthContext } from "../helpers/context/authContext";
+import ChooseAccountModal from "./modals/chooseAccountModal";
+import NoChickenModal from "./modals/noChickenModal";
 // import Login from "../pages/login";
 
 /**
@@ -13,7 +15,7 @@ import React, { useContext } from "react";
  * @param {allowAnon} Boolean Can anonymous users view children
  */
 const AuthCheck = ({ children, allowAnon = false }) => {
-//   const { user, auth, loading } = useContext(AuthContext);
+  const { user, auth, loading, setUser, setAuth, setLoading } = useContext(AuthContext);
 
 //   if (loading) return null; // do nothing if loading
 
@@ -36,7 +38,23 @@ const AuthCheck = ({ children, allowAnon = false }) => {
 
 //   // this should never happen
 //   return null;
-    return children;
+	const handleCloseAccountModal = (e) => {
+		setUser('anonymous');
+		setAuth(true);
+	};
+
+  if (!auth) {
+		return (
+			<>
+				{children}
+				<ChooseAccountModal
+					isOpen={!user || !auth }
+					onClose={handleCloseAccountModal}
+				/>
+			</>
+		)
+	}
+  else  return children;
 };
 
 export default AuthCheck;

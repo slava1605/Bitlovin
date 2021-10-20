@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import MetaMaskImg from "../../assets/images/meta-mask.png";
 
 const ChooseAccountModal = ({ isOpen, onClose}) => {
@@ -18,7 +18,8 @@ const ChooseAccountModal = ({ isOpen, onClose}) => {
 	};
 
   return (
-		<div className={_className} id="choose-an-account" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+		<div className={_className} id="choose-an-account">
+			<div className="mask" onClick={handleClose}></div>
 			<div className="modal-dialog">
 				<div className="modal-content">
 					<div className="modal-body">

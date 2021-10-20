@@ -18,13 +18,7 @@ const ViewChickenModal = ({ chickenData, closeModal }) => {
 
 	return (
 		<>
-			<div
-				className={`modal fade ${chickenData ? "show" : ""} ${_className}`}
-				id="view-chicken"
-				tabindex="-1"
-				role="dialog"
-				aria-labelledby="myModalLabel"
-			>
+			<div className={`modal fade ${chickenData ? "show" : ""} ${_className}`} id="view-chicken">
 				<div className="mask" onClick={handleClose}></div>
 				<div className="modal-dialog" role="document">
 					<div className="modal-content">

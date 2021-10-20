@@ -75,7 +75,6 @@ const EntryRacingTable = () => {
 							<tr key={`${index}_row_1`}>
 								<td colspan="8" className={'hiddenRow'}>
 									<CollapseTransition visible={openedRow === index}>
-										{/* <div className={`accordian-body collapse ${openedRow === index ? " in" : "out"}`} id="demo1" style={{transition: 'height 0.35'}}> */}
 										<div className={`accordian-body`} id="demo1">
 											<div className="pick-gate">
 												<h2 className="text-center">Pick a Lane to enter</h2>
