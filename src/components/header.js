@@ -15,6 +15,7 @@ const Header = () => {
 	const [isMobile, setIsMobile] = useState(checkIfMobile());
 
 	useEffect(() => {
+		setMobileMenuOpened(false);
 		window.addEventListener("resize", handleResize);
 	}, []);
 
@@ -79,9 +80,30 @@ const Header = () => {
 									<span className="caret"></span>
 								</a>
 								<ul className="dropdown-menu">
-									<li><Link to="/">Enter Race</Link></li>
-									<li><Link to="/scheduled-races">Scheduled</Link></li>
-									<li><Link to="/results">Results</Link></li>
+									<li>
+										<Link
+											to="/"
+											onClick={() => setMobileMenuOpened(false)}
+										>
+											Enter Race
+										</Link>
+									</li>
+									<li>
+										<Link
+											to="/scheduled-races"
+											onClick={() => setMobileMenuOpened(false)}
+										>
+											Scheduled
+										</Link>
+									</li>
+									<li>
+										<Link 
+											to="/results"
+											onClick={() => setMobileMenuOpened(false)}
+										>
+											Results
+										</Link>
+									</li>
 								</ul>
 							</li>
 							<li className={`dropdown ${isChecken ? "open" : ''}`}>
@@ -92,7 +114,14 @@ const Header = () => {
 								>
 									Chickens <span className="caret"></span></a>
 								<ul className="dropdown-menu">
-									<li><Link to="/my-coop">My Coop</Link></li>
+									<li>
+										<Link
+											to="/my-coop"
+											onClick={() => setMobileMenuOpened(false)}
+										>
+											My Coop
+										</Link>
+									</li>
 									<li><a href>Search</a></li>
 								</ul>
 							</li>
@@ -119,8 +148,7 @@ const Header = () => {
 								</div>
 							</li>
 						</ul>
-					</div>
-				
+					</div>	
 				</CollapseTransition>
 			</div>
 		</div>

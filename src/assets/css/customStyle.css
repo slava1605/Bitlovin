@@ -124,4 +124,10 @@
 	.navbar .container>div {
 		overflow: hidden !important;
 	}
+	.table-box .table-buttons {
+		overflow-x: scroll;
+	}
+	#view-chicken {
+		top: unset;
+	}
 }

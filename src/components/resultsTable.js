@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import { useRacingContext } from '../helpers/hooks/useRacingContext';
 import TerrainIcon from "../assets/images/terrain.png";
