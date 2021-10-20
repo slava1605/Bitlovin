@@ -4,7 +4,6 @@ const NoChickenModal = ({ isOpen, onClose }) => {
 	const [_className, setClassName] = useState('modal fade show no-chicken');
 
 	useEffect(() => {
-		console.log(isOpen);
 		if (isOpen)
 			setClassName('modal fade no-chicken in');
 	}, [isOpen]);

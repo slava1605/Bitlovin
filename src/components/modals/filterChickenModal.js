@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useRacingContext } from "../../helpers/hooks/useRacingContext";
 
-const FilterModal2 = ({ isOpen, onClose }) => {
+const FilterChickenModal = ({ isOpen, onClose }) => {
 	const [_className, setClassName] = useState('modal fade show');
 	const [isHeritage, setIsHeritage] = useState(false);
 	const [isTalent, setIsTalent] = useState(false);
@@ -125,4 +125,4 @@ const FilterModal2 = ({ isOpen, onClose }) => {
 	)
 };
 
-export default FilterModal2;
+export default FilterChickenModal;

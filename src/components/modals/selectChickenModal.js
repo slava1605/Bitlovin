@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from "react";
 import CloseIcon from "../../assets/images/close-icon.png";
 import ChickenImg from "../../assets/images/chicken.png";
-import FilterModal2 from "./filterModal2";
+import FilterChickenModal from "./filterChickenModal";
 import TransactionConfirmationModal from "./transactionConfirmationModal";
 
 const SelectChickenModal = ({ isOpen, onClose }) => {
@@ -122,7 +122,7 @@ const SelectChickenModal = ({ isOpen, onClose }) => {
 							</tbody>
 						</table>
 					</div>
-					{isFilter2 && <FilterModal2 isOpen={isFilter2} onClose={() => setIsFilter2(false)} />}
+					{isFilter2 && <FilterChickenModal isOpen={isFilter2} onClose={() => setIsFilter2(false)} />}
 					{isTransactionConfirmation &&
 						<TransactionConfirmationModal
 							isOpen={isTransactionConfirmation}

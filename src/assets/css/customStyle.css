@@ -5,8 +5,8 @@
 	background: none;
 }
 .mask {
-	width: 200vw;
-	height: 200vh;
+	width: 300vw;
+	height: 300vh;
 	left: -100vw;
 	top: -100vh;
 	position: fixed;
@@ -59,11 +59,19 @@
 	transition: transform 3s ease-out;
 }
 
-.closing {
+.modal.closing {
 	transform: translate(0,-15%) !important;
 	display: block !important;
 	/* opacity: 0.4 !important; */
 	transition: opacity 0.35s;
+}
+
+.modal.closing .mask {
+	display: none;
+}
+
+.modal .mask {
+	transition: opacity 0.35s !important;
 }
 
 #filter-popup2 .modal-content {
