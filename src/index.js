@@ -29,33 +29,23 @@ ReactDOM.render(
           <Switch>
             <Route path="/scheduled-races">
               <Header />
-              <AuthCheck allowAnon>
-                <ScheduledRaces />
-              </AuthCheck>
+              <ScheduledRaces />
             </Route>
             <Route path="/results">
               <Header />
-              <AuthCheck allowAnon>
-                <Results />
-              </AuthCheck>
+              <Results />
             </Route>
             <Route path="/my-coop">
               <Header />
-              <AuthCheck allowAnon>
-                <MyCoop />
-              </AuthCheck>
+              <MyCoop />
             </Route>
             <Route path="/racing-pending">
               <Header />
-              <AuthCheck allowAnon>
-                <RacingPending />
-              </AuthCheck>
+              <RacingPending />
             </Route>
             <Route path="/racing-result">
               <Header />
-              <AuthCheck allowAnon>
-                <RacingResult />
-              </AuthCheck>
+              <RacingResult />
             </Route>
             <Route path="/">
               <Header />
